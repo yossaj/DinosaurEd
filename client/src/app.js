@@ -7,7 +7,7 @@ const Dinosaurs = require('./models/dinosaurs.js')
 
 document.addEventListener('DOMContentLoaded', ()=>{
     console.log('javascript loaded');
-    
+
 
     // const dinoContainer = document.querySelector('select#diet')
     // const dinoSelect = new DinoSelect(dinoContainer)
@@ -22,4 +22,5 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const url = 'http://localhost:3000/api/dinosaurs'
     const dinosaur = new Dinosaurs(url);
     dinosaur.getData();
+    dinosaur.bindEvents();
 })
