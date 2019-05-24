@@ -13,11 +13,13 @@ DinoGrid.prototype.bindEvents = function(){
 
 
     PubSub.subscribe('Dinosaurs:data-ready', (event)=>{
-        console.log(event.detail)
+        this.render(event.detail)
     })   
 }
 
 DinoGrid.prototype.render = function(dinosaurs) {
+    this.container.innerHTML = ""
+
     for(const dinosaur of dinosaurs){
         const listContainer = document.createElement('div')
         listContainer.classList.add('dino-box')
