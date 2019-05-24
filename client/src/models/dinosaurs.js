@@ -18,7 +18,7 @@ Dinosaurs.prototype.getData = function() {
     .then((dinosaurs) => {
         this.dinoData = dinosaurs;
         PubSub.publish('Dinosaurs:data-loaded', dinosaurs);
-        this.publishDietTypes(dinosaurs)
+        this.publishDietTypes(dinosaurs);
     })
     .catch(console.error);
 };
