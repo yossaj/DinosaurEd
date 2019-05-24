@@ -20,7 +20,6 @@ Dinosaurs.prototype.getData = function() {
     request.get()
     .then((dinosaurs) => {
         PubSub.publish('Dinosaurs:data-loaded', dinosaurs);
-        console.log(dinosaurs)
         this.publishDietTypes(dinosaurs)
     })
     .catch(console.error);
