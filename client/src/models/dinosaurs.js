@@ -9,6 +9,8 @@ Dinosaurs.prototype.bindEvents = function() {
     PubSub.subscribe('SelectView:Dinosaurs-diet-Change', event => {
         const dietIndex = event.detail()
         this.publishDinosaursByDiet(dietIndex);
+        console.log(this.publishDinosaursByDiet(dietIndex));
+        
       })
 };
 
