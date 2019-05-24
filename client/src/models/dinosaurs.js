@@ -17,14 +17,14 @@ Dinosaurs.prototype.getData = function() {
     .then((dinosaurs) => {
         this.dinoData = dinosaurs;
         PubSub.publish('Dinosaurs:data-loaded', dinosaurs);
-        this.publishDietTypes(dinosaurs)
+        this.publishDietTypes(dinosaurs);
     })
     .catch(console.error);
 }
 Dinosaurs.prototype.publishDietTypes = function (dinosaurs) {
   this.dinoData = dinosaurs;
-  this.dinosaurs = this.uniqueDietList();
-  PubSub.publish('Dinosaurs:diet-types-ready', this.dinosaurs);
+  this.diets = this.uniqueDietList();
+  PubSub.publish('Dinosaurs:diet-types-ready', this.diets);
 }
 
 Dinosaurs.prototype.uniqueDietList = function () {
