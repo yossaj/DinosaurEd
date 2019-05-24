@@ -17,7 +17,6 @@ Dinosaurs.prototype.bindEvents = function() {
 
 Dinosaurs.prototype.getData = function() {
     const request = new RequestHelper(this.url);
-    console.log(this.url)
     request.get()
     .then((dinosaurs) => {
         PubSub.publish('Dinosaurs:data-loaded', dinosaurs);
