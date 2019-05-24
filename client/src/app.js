@@ -13,7 +13,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const dinoSelect = new DinoSelect(dinoContainer)
     dinoSelect.bindEvents();
 
-    const dinoGrid = new DinoGrid();
+    const gridContainer = document.querySelector('div#grid-view')
+    const dinoGrid = new DinoGrid(gridContainer);
     dinoGrid.bindEvents();
 
     // const dinoGridList = new dinoGridList();
