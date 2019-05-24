@@ -52,4 +52,4 @@ Dinosaurs.prototype.publishDinosaursByDiet = function (dietIndex) {
   PubSub.publish('Dinosaurs:data-ready', dinosaursByDiet);
 };
 
-module.exports = Dinosaurs
+module.exports = Dinosaurs;
