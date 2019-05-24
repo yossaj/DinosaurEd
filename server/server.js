@@ -11,9 +11,9 @@ const createRouter = require('./helpers/create_router.js');
 
 MongoClient.connect('mongodb://localhost:27017')
   .then((client) => {
-    const db = client.db('bucketList');
-    const mustDosCollection = db.collection('mustDos');
-    app.use('/api/must-dos', createRouter(mustDosCollection));
+    const db = client.db('dinosaur_hub');
+    const dinosaursCollection = db.collection('dinosaurs');
+    app.use('/api/must-dos', createRouter(dinosaursCollection));
   })
   .catch((err) => {
     console.error('Failed to connect to DB');
