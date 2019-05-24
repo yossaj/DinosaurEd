@@ -6,8 +6,8 @@ const Dinosaurs = function(url) {
     this.dinoData = [];
 }
 Dinosaurs.prototype.bindEvents = function() {
-    PubSub.subscribe('SelectView:Dinosaurs-diet-Change', event => {
-        const dietIndex = event.detail()
+    PubSub.subscribe('SelectView:Dinosaurs-diet-change', event => {
+        const dietIndex = event.detail
         this.publishDinosaursByDiet(dietIndex);
         console.log(this.publishDinosaursByDiet(dietIndex));
         
@@ -18,8 +18,8 @@ Dinosaurs.prototype.getData = function() {
     const request = new RequestHelper(this.url);
     request.get()
     .then((dinosaurs) => {
-        this.dinoData = dinosaurs;
-        PubSub.publish('Dinosaurs:data-loaded', dinosaurs);
+        this.dinoData = dinosaurs
+        PubSub.publish('Dinosaurs:data-loaded', dinosaurs)
         this.publishDietTypes(dinosaurs);
     })
     .catch(console.error);
