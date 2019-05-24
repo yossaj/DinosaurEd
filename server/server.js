@@ -13,7 +13,7 @@ MongoClient.connect('mongodb://localhost:27017')
   .then((client) => {
     const db = client.db('dinosaur_hub');
     const dinosaursCollection = db.collection('dinosaurs');
-    app.use('/api/must-dos', createRouter(dinosaursCollection));
+    app.use('/api/dinosaurs', createRouter(dinosaursCollection));
   })
   .catch((err) => {
     console.error('Failed to connect to DB');
@@ -21,5 +21,5 @@ MongoClient.connect('mongodb://localhost:27017')
   });
 
 app.listen(3000, function() {
-  console.log(`ToDo List server running on port ${this.address().port}`);
+  console.log(`Dinosaur server running on port ${this.address().port}`);
 });
