@@ -1,0 +1,33 @@
+{
+  "name": "DinosaurEd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "server:dev": "nodemon server/server.js",
+    "build": "webpack -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yossaj/DinosaurEd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yossaj/DinosaurEd/issues"
+  },
+  "homepage": "https://github.com/yossaj/DinosaurEd#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.0",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.0",
+    "mongodb": "^3.2.6"
+  }
+}
