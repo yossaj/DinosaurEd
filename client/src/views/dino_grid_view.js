@@ -19,10 +19,14 @@ DinoGrid.prototype.bindEvents = function(){
 
 DinoGrid.prototype.render = function(dinosaurs) {
     for(const dinosaur of dinosaurs){
-        // console.log
+        const listContainer = document.createElement('div')
+        listContainer.classList.add('dino-box')
         const name = document.createElement('h2')
         name.textContent = dinosaur.name
-        this.container.appendChild(name)
+        const image = document.createElement('img')
+        this.container.appendChild(listContainer)
+        listContainer.appendChild(name)
+        listContainer.appendChild(image)
     }
 }
 
