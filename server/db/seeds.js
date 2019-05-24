@@ -237,7 +237,7 @@ db.dinosaurs.insertMany([
 		"info": "Xenoceratops had horns and a bony frill with elborate ornamentation of projections, knobs, and spikes.",
         "images": {
             "compareToHuman": "http://www.prehistoric-wildlife.com/images/species/x/xenoceratops-size.jpg",
-            "dinoImage": ""
+            "dinoImage": "https://static01.nyt.com/images/2012/11/13/science/13OBDINO/13OBDINO-popup.jpg"
         }
 	},
 	{
@@ -251,7 +251,7 @@ db.dinosaurs.insertMany([
 		"info": "An ornithopod dinosaur known only by a partial skull and postcranial fragments, not much about Zephyrosaurus has been discovered.",
         "images": {
             "compareToHuman": "http://www.prehistoric-wildlife.com/images/species/z/zephyrosaurus-size.jpg",
-            "dinoImage": ""
+            "dinoImage": "http://images.dinosaurpictures.org/Zephyrosaurus-Jean-Luc-Sala-600x452_ad8f.jpg"
         }
 	}
 ]
