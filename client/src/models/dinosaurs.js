@@ -8,9 +8,10 @@ const Dinosaurs = function(url) {
 Dinosaurs.prototype.bindEvents = function() {
     PubSub.subscribe('SelectView:Dinosaurs-diet-Change', event => {
         const dietIndex = event.detail()
-        this.filteredDietDiosaurs(dietIndex);
-})
-}
+        this.publishDinosaursByDiet(dietIndex);
+      })
+};
+
 Dinosaurs.prototype.getData = function() {
     const request = new RequestHelper(this.url);
     request.get()
@@ -20,12 +21,13 @@ Dinosaurs.prototype.getData = function() {
         this.publishDietTypes(dinosaurs)
     })
     .catch(console.error);
-}
+};
+
 Dinosaurs.prototype.publishDietTypes = function (dinosaurs) {
   this.dinoData = dinosaurs;
-  this.dinosaurs = this.uniqueDietList();
-  PubSub.publish('Dinosaurs:diet-types-ready', this.dinosaurs);
-}
+  this.diets = this.uniqueDietList();
+  PubSub.publish('Dinosaurs:diet-types-ready', this.diets);
+};
 
 Dinosaurs.prototype.uniqueDietList = function () {
     return this.dietList().filter((diet, index, array) => {
@@ -36,6 +38,18 @@ Dinosaurs.prototype.uniqueDietList = function () {
 Dinosaurs.prototype.dietList= function() {
     const dietList = this.dinoData.map(dinosaur => dinosaur.diet);
     return dietList;
+};
+
+Dinosaurs.prototype.dinosaursByDiet = function (dietIndex) {
+  const selectedDiet = this.diets[dietIndex];
+    return this.dinoData.filter((dinosaur) => {
+      return dinosaur.diet === selectedDiet;
+    });
+};
+
+Dinosaurs.prototype.publishDinosaursByDiet = function (dietIndex) {
+  const dinosaursByDiet = this.dinosaursByDiet(dietIndex);
+  PubSub.publish('Dinosaurs:data-ready', dinosaursByDiet);
 };
 
 module.exports = Dinosaurs
