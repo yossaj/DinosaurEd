@@ -10,7 +10,7 @@ DinoSelect.prototype.bindEvents = function() {
    })
    this.container.addEventListener('change', (event) => {
     console.log(event.target.value)
-    PubSub.publish('SelectView:Dinosaur-diet-change', (event.target.value)) 
+    PubSub.publish('SelectView:Dinosaurs-diet-change', (event.target.value)) 
    })
     
 } 
