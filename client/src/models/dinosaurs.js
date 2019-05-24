@@ -3,6 +3,7 @@ const PubSub = require('../helpers/pub_sub.js');
 
 const Dinosaurs = function(url) {
     this.url = url
+    this.dinoData = [];
 }
 Dinosaurs.prototype.bindEvents = function() {
     PubSub.subscribe('SelectView:Dinosaurs-diet-Change', event => {
@@ -20,14 +21,21 @@ Dinosaurs.prototype.getData = function() {
     })
     .catch(console.error);
 }
+Dinosaurs.prototype.publishDietTypes = function (dinosaurs) {
+  this.dinoData = dinosaurs;
+  this.dinosaurs = this.uniqueDietList();
+  PubSub.publish('Dinosaurs:diet-types-ready', this.dinosaurs);
+}
+
 Dinosaurs.prototype.uniqueDietList = function () {
     return this.dietList().filter((diet, index, array) => {
         return array.indexOf(diet) === index;
     })
-}
-Dinosaurs.prototype.dietListFunction = function() {
+};
+
+Dinosaurs.prototype.dietList= function() {
     const dietList = this.dinoData.map(dinosaur => dinosaur.diet);
     return dietList;
-}
+};
 
 module.exports = Dinosaurs
