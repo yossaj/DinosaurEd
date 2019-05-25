@@ -7,7 +7,7 @@ body {
 body {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: ;
+  /* grid-template-rows: ; */
   grid-gap: 0.5em;
   font-family: sans-serif;
 }
@@ -25,21 +25,18 @@ footer {
 #grid-view{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 0.2em;
+  grid-gap: 0.4em;
 }
 
 @media only screen and (max-width: 768px){
   #grid-view{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 0.2em;
-}
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
-@media only screen and (max-width: 375px){
+@media only screen and (max-width: 411px){
   #grid-view{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 0.2em;
+    grid-template-columns: 1fr;
+  }
 }
-}
+
