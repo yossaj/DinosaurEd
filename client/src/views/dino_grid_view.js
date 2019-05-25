@@ -7,7 +7,7 @@ const DinoGrid = function(container){
 }
 
 DinoGrid.prototype.bindEvents = function(){
-    
+
     PubSub.subscribe('Dinosaurs:data-loaded',(event)=>{
         this.render(event.detail, this.container)
     })
@@ -22,5 +22,6 @@ DinoGrid.prototype.render = function(dinosaurs, container) {
     const dinoGridItem = new DinoGridItem(dinosaurs, container);
     dinoGridItem.render()
 }
+
 
 module.exports = DinoGrid;

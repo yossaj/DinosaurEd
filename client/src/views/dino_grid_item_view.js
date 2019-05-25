@@ -21,6 +21,4 @@ DinoGridItem.prototype.render = function(){
     }
 }
 
-
-
 module.exports = DinoGridItem;
