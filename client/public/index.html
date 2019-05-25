@@ -2,6 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <script src="js/bundle.js"></script>
+    <script src="js/audio.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
@@ -14,12 +15,18 @@
     
     <aside>
         <select class="select-css" id="diet" style="width:200px;">
-            <option value="">Please Select a Diet</option>
+            <option value="">Please Select a</option>
         </select>
     </aside>
 
     <main>
     <div id="grid-view" ></div>
     </main>
+<footer>
+
+<button onclick="recordStop()" id="record-stop-button">Record</button>
+<button onclick="playAudio()" disabled id="play-audio-button">Play</button>
+
+</footer>
 </body>
 </html>

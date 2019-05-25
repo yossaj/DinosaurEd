@@ -3,7 +3,6 @@ const DinoGridItem = require('./dino_grid_item_view.js')
 
 const DinoGrid = function(container){
     this.container = container
-    console.log(container)
 }
 
 DinoGrid.prototype.bindEvents = function(){

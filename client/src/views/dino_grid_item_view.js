@@ -3,7 +3,6 @@ const PubSub = require('../helpers/pub_sub.js')
 const DinoGridItem = function (dinosaurs, container) {
     this.dinosaurs = dinosaurs
     this.container = container
-    console.log(container)
 }
 
 DinoGridItem.prototype.render = function(){

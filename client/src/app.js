@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
     // const dinoGridList = new dinoGridList();
     // dinoGridList.bindEvents();
 
+
+    
+
     const url = 'http://localhost:3000/api/dinosaurs'
     const dinosaur = new Dinosaurs(url);
     dinosaur.getData();

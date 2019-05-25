@@ -52,8 +52,6 @@ Dinosaurs.prototype.dinosaursByDiet = function (dietIndex) {
 Dinosaurs.prototype.publishDinosaursByDiet = function (dietIndex) {
   const dinosaursByDiet = this.dinosaursByDiet(dietIndex);
   PubSub.publish('Dinosaurs:data-ready', dinosaursByDiet);
-  console.log(dinosaursByDiet);
-  
 };
 
 module.exports = Dinosaurs

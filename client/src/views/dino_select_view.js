@@ -9,7 +9,6 @@ DinoSelect.prototype.bindEvents = function() {
     this.populateSelect(event.detail)
    })
    this.container.addEventListener('change', (event) => {
-    console.log(event.target.value)
     PubSub.publish('SelectView:Dinosaurs-diet-change', (event.target.value)) 
    })
     
