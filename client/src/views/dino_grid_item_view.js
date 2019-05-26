@@ -12,7 +12,7 @@ DinoGridItem.prototype.render = function(){
     for(const dinosaur of this.dinosaurs){
         const listContainer = document.createElement('div')
         listContainer.classList.add('dino-box')
-        const name = document.createElement('p')
+        const name = document.createElement('h3')
         name.textContent = dinosaur.name
         const image = document.createElement('img')
         image.src = dinosaur.images.dinoImage

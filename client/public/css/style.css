@@ -1,15 +1,21 @@
 body {
-  background-image: url(https://d1t80wr11ktjcz.cloudfront.net/wp-content/uploads/2018/07/dr-ian-malcolm-jurassic-park-jeff-goldblum-chaos-e1531929342928.jpeg);
+  /* background-image: url(https://d1t80wr11ktjcz.cloudfront.net/wp-content/uploads/2018/07/dr-ian-malcolm-jurassic-park-jeff-goldblum-chaos-e1531929342928.jpeg); */
   color: aliceblue;
+  background-color: #18C8FF;
 }
 
 
 body {
-  display: grid;
+
   grid-template-columns: 1fr;
-  /* grid-template-rows: ; */
+  grid-template-rows: ;
   grid-gap: 0.5em;
-  font-family: sans-serif;
+  font-family: Proxima Soft, sans-serif;
+  /* font-size: 30px;
+  font-weight: bold;
+  color: #FF9605;
+  -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: white; */
   padding: 0rem 3rem;
 }
 
@@ -24,20 +30,59 @@ footer {
 }
 
 main{
-  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px 0;
+  border: 10px solid;
+  border-color: #A2F232;
+  border-radius: 20px;
+  margin: 20px;
+  background-color: white;
 }
+
+h1 {
+  font-size: 70px;
+  font-weight: 800;
+  color: #FF9605;
+  -webkit-text-stroke-width: 4px;
+   -webkit-text-stroke-color: white;
+}
+
+.dino-box {
+  width: 300px;
+  /* height: 200px; */
+  flex-basis: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 10px;
+  justify-content: center;
+}
+
+.dino-box h3 {
+  color: gray;
+}
+
+.dino-box img {
+  height: 150px;
+}
+
 
 
 #grid-view{
-  display: grid;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow-x: scroll;
+  border: 0 solid;
+  border-radius: 20px;
+  /* display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 0.4em;
-  color: black
+  color: black */
 }
 
-#grid-view img{
+/* #grid-view img{
   width: 150px;
-}
+} */
 
 
 @media only screen and (max-width: 768px){
@@ -64,6 +109,24 @@ main{
     background-size: .65em auto, 100%;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
 
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: #F13721;
+}
 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #FF9605;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #F4EC07;
+}
