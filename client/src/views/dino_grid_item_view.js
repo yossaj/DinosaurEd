@@ -6,13 +6,15 @@ const DinoGridItem = function (dinosaurs, container) {
     this.container = container
     // console.log(container)
     
+    // this.map = map
 }
 
 DinoGridItem.prototype.render = function(){
     this.container.innerHTML = ""
 
-   const map = new Map()
-
+    const map = new Map()
+    console.log(map);
+    
     for(const dinosaur of this.dinosaurs){
       
         const listContainer = document.createElement('div')

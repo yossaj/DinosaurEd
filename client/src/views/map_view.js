@@ -20,10 +20,8 @@ Map.prototype.render = function(){
 }
 
 Map.prototype.setPosition = function (long,lat) {
-
     console.log(this.mymap);
     this.mymap.setView([lat, long], 5);
-    
 }
 
 module.exports = Map;
