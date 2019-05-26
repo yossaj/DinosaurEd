@@ -25,18 +25,30 @@ footer {
 
 main{
   background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
 }
 
 
 #grid-view{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 0.4em;
+  grid-gap: 0.8em;
   color: black
+}
+
+#grid-view .dino-box{
+  margin: 10px;
 }
 
 #grid-view img{
   width: 150px;
+  -webkit-filter: grayscale(50%); 
+  filter: grayscale(50%); 
+}
+
+#grid-view img:hover{
+  -webkit-filter: grayscale(0%); 
+  filter: grayscale(0%);
 }
 
 
