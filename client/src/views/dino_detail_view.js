@@ -1,5 +1,5 @@
 const PubSub = require('../helpers/pub_sub.js')
-const Map = require('./map_view.js')
+
 
 const DinoDetailView = function (dinosaurs, detailContainer) {
   this.dinosaurs = dinosaurs;

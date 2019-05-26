@@ -32,7 +32,13 @@ DinoGridItem.prototype.render = function(){
             mapDiv.classList.remove("off")
             map.render()
           }
-
+          console.log(dinosaur)
+          let lat = dinosaur.location.latitude
+          let long = dinosaur.location.longitude
+          console.log(long,lat);
+          
+        
+          map.setPosition(long,lat)
         }
 
         const name = document.createElement('h3')
