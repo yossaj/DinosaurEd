@@ -86,7 +86,7 @@ db.dinosaurs.insertMany([
 		"length": "estimated 4m",
 		"period": "Late Cretaceous",
 		"mya": "66",
-		"info": "<em>Dracorex hogwartsia</em> was a pachycephalosaur that did not have a domed head. Instead, its skull was adorned with spikes and frills reminiscent of a dragon. A skull was discovered in the Hell Creek Formation in South Dakota and donated to the Children's Museum of Indianapolis in 2004. Its name was inspired by J.K. Rowling's Harry Potter series and the young visitors to the children's museum.",
+		"info": "Dracorex hogwartsia was a pachycephalosaur that did not have a domed head. Instead, its skull was adorned with spikes and frills reminiscent of a dragon. A skull was discovered in the Hell Creek Formation in South Dakota and donated to the Children's Museum of Indianapolis in 2004. Its name was inspired by J.K. Rowling's Harry Potter series and the young visitors to the children's museum.",
         "images": {
             "compareToHuman": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Pachycephalosaurus_scale.png",
             "dinoImage": "https://banner2.kisspng.com/20180729/cf/kisspng-stygimoloch-tyrannosaurus-universal-pictures-baryo-jurassic-world-fallen-kingdom-logo-5b5e75a72532f0.1617724815329171591524.jpg"
@@ -105,7 +105,7 @@ db.dinosaurs.insertMany([
 		"length": "14m",
 		"period": "Late Cretaceous",
 		"mya": "80.5",
-		"info": "Elasmosaurus was an aquatic dinosaur with an extremely long neck that likely fed on other smaller aquatic fauna like fish, molluscs, and squid. E.D. Cope mistakenly placed the skull of an Elasmosaurus on the much shorter tail rather than the extremely long neck. Another one of the most interesting facts about Elasmosaurus was that it was also incapable of moving its head like a snake. While early paleontologists may have thought it could move its neck like a snake, modern paleontologists now know that is an impossibility.  Elasmosaurus was only able to hold its neck out straight, anything else wouldn’t have been possible.",
+		"info": "Elasmosaurus was an aquatic dinosaur with an extremely long neck that likely fed on other smaller aquatic fauna like fish, molluscs, and squid. E.D. Cope mistakenly placed the skull of an Elasmosaurus on the much shorter tail rather than the extremely long neck. Another one of the most interesting facts about Elasmosaurus was that it was also incapable of moving its head like a snake. While early paleontologists may have thought it could move its neck like a snake, modern paleontologists now know that is an impossibility. Elasmosaurus was only able to hold its neck out straight.",
         "images": {
             "compareToHuman": "http://www.prehistoric-wildlife.com/images/species/e/elasmosaurus-size.jpg",
             "dinoImage": "http://images.dinosaurpictures.org/elasmosaurus-platyurus-a-prehistoric-sergey-krasovskiy_1ead.jpg"
@@ -143,7 +143,7 @@ db.dinosaurs.insertMany([
 		"length": "7m",
 		"period": "Late Cretaceous",
 		"mya": "70-66",
-		"info": "Indosuchus was a close relative of other abelisaurids, such as Abelisaurus from South America and Majungasaurus from Madagascar. It possibly grew to a size of 6 meters (20 feet) long. Because only some skull material was found, Indosuchus placement has been somewhat erratic. As the remains are fragmentary, it is difficult to assess whether Indosuchus is identical to other poorly known theropods from the Lameta Formation like Indosaurus. Though, the discovery of other abelisaurids like Carnotaurus has helped clarify its position. Indosuchus had a flattened crest on its skull.",
+		"info": "Indosuchus was a close relative of other abelisaurids, such as Abelisaurus from South America and Majungasaurus from Madagascar. It could grow to a size of 6m (20ft) long and had a flattened crest on its skull. Because only some skull material was found, Indosuchus placement has been somewhat erratic. As the remains are fragmentary, it is difficult to assess whether Indosuchus is identical to other poorly known theropods from the Lameta Formation like Indosaurus. Though, the discovery of other abelisaurids like Carnotaurus has helped clarify its position. ",
         "images": {
             "compareToHuman": "http://www.prehistoric-wildlife.com/images/species/i/indosuchus-size.jpg",
             "dinoImage": "http://images.dinosaurpictures.org/Indosuchus_7076.jpg"
@@ -181,7 +181,7 @@ db.dinosaurs.insertMany([
 		"length": "3m",
 		"period": "Early Cretaceous",
 		"mya": "121-112",
-		"info": "Minmi was a small, anklyosaurian, armored dinosaur discovered in Australia. Minmi was about 6½ feet (2 meters) long, and stood about 3 feet (1 meter) tall at the shoulder. Its body, head and tail were protected by a variety of types of bony armor. Its hind legs were longer than its front limbs, and from fossilized tracks, scientists believe that Minmi was relatively slow moving.",
+		"info": "Minmi was a small, anklyosaurian, armored dinosaur discovered in Australia. Minmi was about 2m (6.6ft) long, and stood about 1m (3ft) tall at the shoulder. Its body, head and tail were protected by a variety of types of bony armor. Its hind legs were longer than its front limbs, and from fossilized tracks, scientists believe that Minmi was relatively slow moving.",
         "images": {
             "compareToHuman": "http://www.prehistoric-wildlife.com/images/species/m/minmi-size.jpg",
             "dinoImage": "http://images.dinosaurpictures.org/minmi-paravertebra-a-prehistoric-era-sergey-krasovskiy_07e1.jpg"
@@ -200,7 +200,7 @@ db.dinosaurs.insertMany([
 		"length": "7m",
 		"period": "Early Cretaceous",
 		"mya": "125-112",
-		"info": "Ouranosaurus was an iguanodont dinosaur in Africa. It had a large sail on its back supported by long, wide neural spines and an elnogated, flat skull. The sail is believed to have been used to keep the animal cool during the hot days. It could do this by expelling heat through the sail. Other paleontologists believe that this wasn’t the purpose of it at all, that it was used only for the dinosaur to attract a mate with. Kind of like feathers on a peacock. A well known fact about Ouranosaurus is that although it didn’t have any teeth in its bony beak, it did have teeth in its cheek. This would have allowed the dinosaur to grind a variety of plant material so it could easily digest it. This dinosaur’s diet probably consisted of seed ferns, ginkgos and club mosses.",
+		"info": "Ouranosaurus was an iguanodont dinosaur in Africa. It had a large sail on its back supported by long, wide neural spines and an elongated, flat skull. The sail is believed to have been used to keep the animal cool during the hot days. It could do this by expelling heat through the sail. Other paleontologists believe that this wasn’t the purpose of it at all, that it was used only for the dinosaur to attract a mate with. Kind of like feathers on a peacock. A well known fact about Ouranosaurus is that although it didn’t have any teeth in its bony beak, it did have teeth in its cheek. This would have allowed the dinosaur to grind a variety of plant material so it could easily digest it. This dinosaur’s diet probably consisted of seed ferns, ginkgos and club mosses.",
         "images": {
             "compareToHuman": "http://www.prehistoric-wildlife.com/images/species/o/ouranosaurus-size.jpg",
             "dinoImage": "https://vignette.wikia.nocookie.net/jurassicpark/images/5/5c/JPI_Ouranosaurus_Profile.gif/revision/latest?cb=20161104160506"
@@ -219,7 +219,7 @@ db.dinosaurs.insertMany([
 		"length": "11m",
 		"period": "Late Cretaceous",
 		"mya": "76-74",
-		"info": "Found in Canada and the USA, Parasaurolophus was a hadrosaur most famous for its long, elaborate cranial crest. It belonged to a group of broad-beaked, plant-eating dinosaurs called hadrosaurs. Its most striking feature was the long, bony crest on its head, which contained a network of tubes. It is likely that the tubes worked like a trumpet to make very loud, booming calls to communicate with other herd members. In the 1930s, at least one scientist believed that Parasaurolophus searched for food underwater and used its crest as a snorkel. But we now know that the crest does not have a hole in the end, so it could not have been used for breathing underwater. The muscular body and wide shoulders of Parasaurolophus may have helped it push through dense undergrowth in woodlands. ",
+		"info": "Found in Canada and the USA, Parasaurolophus was a hadrosaur most famous for its long, elaborate cranial crest. It belonged to a group of broad-beaked, plant-eating dinosaurs called hadrosaurs. Its most striking feature was the long, bony crest on its head, which contained a network of tubes. It is likely that the tubes worked like a trumpet to make very loud, booming calls to communicate with other herd members. In the 1930s, at least one scientist believed that Parasaurolophus searched for food underwater and used its crest as a snorkel. But we now know that the crest does not have a hole in the end,so it could not have been used for breathing underwater. The muscular body and wide shoulders of Parasaurolophus may have helped it push through dense undergrowth in woodlands. ",
         "images": {
             "compareToHuman": "http://www.prehistoric-wildlife.com/images/species/p/parasaurolophus-size.jpg",
             "dinoImage": "http://images.dinosaurpictures.org/Parasaurolophus_0d4f.jpg"
@@ -257,7 +257,7 @@ db.dinosaurs.insertMany([
 		"length": "12m",
 		"period": "Late Cretaceous",
 		"mya": "68-66",
-		"info": "Tyrannosaurus is well-represented in both fiction and history with over 50 specimens discovered. It and was one of the last non-avian dinosaurs to exist before the extinction event. As long as a bus and twice the weight of an elephant, the mighty Tyrannosaurus was the deadliest of all meat-eating dinosaurs. It was a heavyweight hunter with strong teeth and incredibly powerful jaws, which allowed the dinosaur to kill and eat almost any animal that came in its way. The Tyrannosaurus had no enemies, and its name means “king of the lizards”.",
+		"info": "Tyrannosaurus is well-represented in both fiction and history with over 50 specimens discovered. It was one of the last non-avian dinosaurs to exist before the extinction event. As long as a bus and twice the weight of an elephant, the mighty Tyrannosaurus was the deadliest of all meat-eating dinosaurs. It was a heavyweight hunter with strong teeth and incredibly powerful jaws, which allowed the dinosaur to kill and eat almost any animal that came in its way. The Tyrannosaurus had no enemies, and its name means “king of the lizards”.",
         "images": {
             "compareToHuman": "http://www.prehistoric-wildlife.com/images/species/t/tyrannosaurus-size.jpg",
             "dinoImage": "http://islanublar.jurassicworld.com/media/dinosaurs/tyrannosaurus-rex/tyrannosaurus-rex-info-graphic.png"
@@ -276,7 +276,7 @@ db.dinosaurs.insertMany([
 		"length": "6m",
 		"period": "Early Cretaceous",
 		"mya": "112-100",
-		"info": "Found in the USA, Utahraptor resembled velociraptor but much larger, prompting Robert T. Bakker to pronounce it 'Spielberg's raptor' due to the velociraptors in the movie <em>Jurassic Park</em> being portrayed much larger than their historical counterparts. Utahraptor was the largest member of a group of dinosaurs called dromaeosaurs. Like other dromaeosaurs, it had a large, hooked claw on its second toe that it might have used for slashing or stabbing a victim after leaping on it. It reached about half a tonne in weight, making it heavier than a grizzly bear. The dromaeosaurs were small but ferocious hunters.  ",
+		"info": "Found in the USA, Utahraptor resembled velociraptor but much larger, prompting Robert T. Bakker to pronounce it as 'Spielberg's raptor' due to the velociraptors in the movie Jurassic Park being portrayed much larger than their historical counterparts. Utahraptor was the largest member of a group of dinosaurs called dromaeosaurs. Like other dromaeosaurs, it had a large, hooked claw on its second toe that it might have used for slashing or stabbing a victim after leaping on it. It reached about half a tonne in weight, making it heavier than a grizzly bear. The dromaeosaurs were small but ferocious hunters.  ",
         "images": {
             "compareToHuman": "http://www.prehistoric-wildlife.com/images/species/u/utahraptor-size.jpg",
             "dinoImage": "https://nhmu.utah.edu/sites/default/files/g1835_Utahraptor_1.png"
@@ -314,7 +314,7 @@ db.dinosaurs.insertMany([
 		"length": "6m",
 		"period": "Early Cretaceous",
 		"mya": "78.5-77.5",
-		"info": "Xenoceratops had horns and a bony frill with elborate ornamentation of projections, knobs, and spikes. It can be distinguished from other ceratopsids by details of the frill's bony ornamentation. The two bony projections closest to the midline of the frill are thick knobs, oriented toward the midline. Next to each knob is a single long flattened straight spike pointing laterally and to the rear. The anterior corners of the parietal have a large triangular knob. Unlike most other centrosaurines, the midline bar of the frill has no bumps or other ornamentation. Xenoceratops probably had a nasal and brow horn configuration comparable to that of other basal centrosaurines. The holotype and associated skull material do not include much of the face, but the Royal Tyrrell skull shows evidence of large brow horns, perhaps similar to those of Albertaceratops and Diabloceratops. Similarly, the form of the nasal bone fragment suggests a long, low structure like that of Medusaceratops.",
+		"info": "Xenoceratops had horns and a bony frill with elaborate ornamentation of projections, knobs, and spikes. It can be distinguished from other ceratopsids by the details of the frill's bony ornamentation. The two bony projections closest to the midline of the frill are thick knobs, oriented toward the midline. Next to each knob is a single long flattened straight spike pointing laterally and to the rear. The anterior corners of the parietal have a large triangular knob. Unlike most other centrosaurines, the midline bar of the frill has no bumps or other ornamentation. Xenoceratops probably had a nasal and brow horn configuration comparable to that of other basal centrosaurines. The holotype and associated skull material do not include much of the face, but the Royal Tyrrell skull shows evidence of large brow horns, perhaps similar to those of Albertaceratops and Diabloceratops. Similarly, the form of the nasal bone fragment suggests a long, low structure like that of Medusaceratops.",
         "images": {
             "compareToHuman": "http://www.prehistoric-wildlife.com/images/species/x/xenoceratops-size.jpg",
             "dinoImage": "https://static01.nyt.com/images/2012/11/13/science/13OBDINO/13OBDINO-popup.jpg"
