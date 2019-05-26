@@ -30,7 +30,7 @@ footer {
 }
 
 main{
-  padding: 10px 0;
+  /* padding: 10px 0; */
   border: 10px solid;
   border-color: #A2F232;
   border-radius: 20px;
@@ -118,11 +118,12 @@ h1 {
 /* Track */
 ::-webkit-scrollbar-track {
   background: #F13721;
+  border-radius: 0 0 10px 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
   background: #FF9605;
 }
 

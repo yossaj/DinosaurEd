@@ -10,6 +10,7 @@ DinoGrid.prototype.bindEvents = function(){
 
     PubSub.subscribe('Dinosaurs:data-loaded',(event)=>{
         this.render(event.detail, this.container)
+        
     })
 
     PubSub.subscribe('Dinosaurs:data-ready', (event)=>{
