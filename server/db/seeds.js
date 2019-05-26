@@ -51,7 +51,7 @@ db.dinosaurs.insertMany([
 		"info": "Brachiosaurus was a sauropod that had very long front legs and a long, flexible neck. It weighed as much as 30–50 tonnes, which is about the same as 12 African elephants. This dinosaur’s long neck helped it to feed at an incredible height of 15m (49ft). It used its spoon-shaped teeth to snip off leaves from trees like conifers and tree ferns. Brachiosaurus ate about 200kg (440lb) of leaves and twigs per day.  ",
         "images": {
             "compareToHuman": "http://www.prehistoric-wildlife.com/images/species/b/brachiosaurus-size.jpg",
-            "dinoImage": "https://www.thoughtco.com/thmb/zbBHNerDgv55ppn0kqn_ikcH8iQ=/768x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-680791823-59af09edaad52b0010486221.jpgs"
+            "dinoImage": "https://www.wildrepublic.com/wp-content/uploads/2018/07/Brachiosaurus-3025-xl.jpg"
         },
         "location": {
             "continent": "North America",
