@@ -206,9 +206,9 @@ db.dinosaurs.insertMany([
             "dinoImage": "https://vignette.wikia.nocookie.net/jurassicpark/images/5/5c/JPI_Ouranosaurus_Profile.gif/revision/latest?cb=20161104160506"
         },
         "location": {
-            "continent": "",
-            "latitude": "",
-            "longitude": ""     
+            "continent": "Africa",
+            "latitude": "8.3451",
+            "longitude": "14.7915"     
         }
 	},
 	{
@@ -225,9 +225,9 @@ db.dinosaurs.insertMany([
             "dinoImage": "http://images.dinosaurpictures.org/Parasaurolophus_0d4f.jpg"
         },
         "location": {
-            "continent": "",
-            "latitude": "",
-            "longitude": ""     
+            "continent": "North America",
+            "latitude": "50.7501",
+            "longitude": "-111.4886"     
         }
 	},
 	{
@@ -244,9 +244,9 @@ db.dinosaurs.insertMany([
             "dinoImage": "https://vignette.wikia.nocookie.net/walkingwithdinos/images/e/ee/Dino-large_spino.png/revision/latest?cb=20131109000010"
         },
         "location": {
-            "continent": "",
-            "latitude": "",
-            "longitude": ""     
+            "continent": "Africa",
+            "latitude": "30.905",
+            "longitude": "-3.855"     
         }
 	},
 	{
@@ -263,9 +263,9 @@ db.dinosaurs.insertMany([
             "dinoImage": "http://islanublar.jurassicworld.com/media/dinosaurs/tyrannosaurus-rex/tyrannosaurus-rex-info-graphic.png"
         },
         "location": {
-            "continent": "",
-            "latitude": "",
-            "longitude": ""     
+            "continent": "North America",
+            "latitude": "46.3819",
+            "longitude": "-103.9644"     
         }
 	},
 	{
@@ -282,9 +282,9 @@ db.dinosaurs.insertMany([
             "dinoImage": "https://nhmu.utah.edu/sites/default/files/g1835_Utahraptor_1.png"
         },
         "location": {
-            "continent": "",
-            "latitude": "",
-            "longitude": ""     
+            "continent": "North America",
+            "latitude": "38.8261",
+            "longitude": "-109.5679"     
         }
 	},
 	{
@@ -301,9 +301,9 @@ db.dinosaurs.insertMany([
             "dinoImage": "https://i.pinimg.com/originals/ef/e5/53/efe55306be5953df1de2e009b275d3c4.jpg"
         },
         "location": {
-            "continent": "",
-            "latitude": "",
-            "longitude": ""     
+            "continent": "Africa",
+            "latitude": "-16.8083",
+            "longitude": "28.275"     
         }
 	},
 	{
@@ -320,9 +320,9 @@ db.dinosaurs.insertMany([
             "dinoImage": "https://static01.nyt.com/images/2012/11/13/science/13OBDINO/13OBDINO-popup.jpg"
         },
         "location": {
-            "continent": "",
-            "latitude": "",
-            "longitude": ""     
+            "continent": "North America",
+            "latitude": "49.5072",
+            "longitude": "-111.3569"     
         }
 	},
 	{
@@ -339,9 +339,9 @@ db.dinosaurs.insertMany([
             "dinoImage": "http://images.dinosaurpictures.org/Zephyrosaurus-Jean-Luc-Sala-600x452_ad8f.jpg"
         },
         "location": {
-            "continent": "",
-            "latitude": "",
-            "longitude": ""     
+            "continent": "North America",
+            "latitude": "44.5133",
+            "longitude": "-107.9022"     
         }
 	}
 ]
