@@ -276,7 +276,7 @@ db.dinosaurs.insertMany([
 		"length": "6m",
 		"period": "Early Cretaceous",
 		"mya": "112-100",
-		"info": "Found in the USA, Utahraptor resembled velociraptor but much larger, prompting Robert T. Bakker to pronounce it 'Spielberg's raptor' due to the velociraptors in the movie <em>Jurassic Park</em> being portrayed much larger than their historical counterparts. Utahraptor was the largest member of a group of dinosaurs called dromaeosaurs. Like other dromaeosaurs, it had a large, hooked claw on its second toe that it might have used for slashing or stabbing a victim after leaping on it. It reached about half a tonne in weight, making it heavier than a grizzly bear. The dromaeosaurs were small but ferocious hunters.  ",
+		"info": "Found in the USA, Utahraptor resembled velociraptor but much larger, prompting Robert T. Bakker to pronounce it 'Spielberg's raptor' due to the velociraptors in the movie Jurassic Park being portrayed much larger than their historical counterparts. Utahraptor was the largest member of a group of dinosaurs called dromaeosaurs. Like other dromaeosaurs, it had a large, hooked claw on its second toe that it might have used for slashing or stabbing a victim after leaping on it. It reached about half a tonne in weight, making it heavier than a grizzly bear. The dromaeosaurs were small but ferocious hunters.  ",
         "images": {
             "compareToHuman": "http://www.prehistoric-wildlife.com/images/species/u/utahraptor-size.jpg",
             "dinoImage": "https://nhmu.utah.edu/sites/default/files/g1835_Utahraptor_1.png"
