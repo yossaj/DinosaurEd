@@ -182,3 +182,5 @@ h1 {
 ::-webkit-scrollbar-thumb:hover {
   background: #F4EC07;
 }
+
+#mapid { height: 480px; }
