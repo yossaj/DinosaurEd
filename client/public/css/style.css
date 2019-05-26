@@ -10,7 +10,7 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: ;
   grid-gap: 0.5em;
-  font-family: Proxima Soft, sans-serif;
+  font-family: Quicksand, sans-serif;
   /* font-size: 30px;
   font-weight: bold;
   color: #FF9605;
@@ -68,7 +68,6 @@ h1 {
 
 
 #grid-view{
-<<<<<<< HEAD
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -76,10 +75,6 @@ h1 {
   border: 0 solid;
   border-radius: 20px;
   /* display: grid;
-=======
-  padding: 10px; 
-  display: grid;
->>>>>>> 283fe25f12d599cc0a7bdc34d4c9bf99668a3ee1
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 0.4em;
   color: black */
