@@ -1,0 +1,184 @@
+body {
+  /* background-image: url(https://d1t80wr11ktjcz.cloudfront.net/wp-content/uploads/2018/07/dr-ian-malcolm-jurassic-park-jeff-goldblum-chaos-e1531929342928.jpeg); */
+  color: aliceblue;
+  background-color: #18C8FF;
+}
+
+
+body {
+
+  grid-template-columns: 1fr;
+  grid-template-rows: ;
+  grid-gap: 0.5em;
+  font-family: Proxima Soft, sans-serif;
+  /* font-size: 30px;
+  font-weight: bold;
+  color: #FF9605;
+  -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: white; */
+  padding: 0rem 3rem;
+}
+
+header,
+main,
+aside,
+footer {
+  grid-column: 1 / span 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main{
+  /* padding: 10px 0; */
+  border: 10px solid;
+  border-color: #A2F232;
+  border-radius: 20px;
+  margin: 20px;
+  background-color: white;
+}
+
+h1 {
+  font-size: 70px;
+  font-weight: 800;
+  color: #FF9605;
+  -webkit-text-stroke-width: 4px;
+   -webkit-text-stroke-color: white;
+}
+
+.dino-box {
+  min-width: 300px;
+  /* height: 200px; */
+  flex-basis: 20%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: stretch; */
+  padding: 10px;
+  justify-content: center;
+}
+
+.dino-box h3 {
+  color: gray;
+}
+
+.dino-box img {
+  height: 150px;
+}
+
+.containerTab {
+  border: 10px solid;
+  border-color: #FF9605;
+  border-radius: 20px;
+  background-color: white;
+  margin: 20px;
+}
+
+.containerTab h2 {
+  width: 100%;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: gray;
+}
+
+.contents {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contents p {
+  margin-top: 10px;
+  font-size: 18px;
+  padding-right: 10px;
+  color: gray;
+}
+
+.contents img {
+  border-radius: 40px;
+  padding: 20px 0 20px 20px;
+  width: 50%;
+  height: 50%;
+}
+
+.contents h4 {
+  font-size: 20px;
+  margin: 0;
+  color: #A2F232;
+}
+
+.info {
+  padding: 20px;
+}
+
+.info img {
+  width: auto;
+}
+
+
+
+#grid-view{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow-x: scroll;
+  border: 0 solid;
+  border-radius: 20px;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 0.4em;
+  color: black */
+}
+
+/* #grid-view img{
+  width: 150px;
+} */
+
+
+@media only screen and (max-width: 768px){
+  #grid-view{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 411px){
+  #grid-view{
+    grid-template-columns: 1fr;
+  }
+}
+
+.select-css {
+    font-size: 16px;
+    line-height: 1.3;
+    padding: .6em 1.4em .5em .8em;
+    -webkit-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+      linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #F13721;
+  border-radius: 0 0 10px 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 0 0 10px 10px;
+  background: #FF9605;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #F4EC07;
+}
