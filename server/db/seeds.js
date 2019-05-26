@@ -18,7 +18,7 @@ db.dinosaurs.insertMany([
         "location": {
             "continent": "North America",
             "latitude": "41.9014",
-            "longitude": "-106.0792"     
+            "longitude": "-106.0792"
         }
 	},
 	{
@@ -37,7 +37,7 @@ db.dinosaurs.insertMany([
         "location": {
             "continent": "North America",
             "latitude": "42.0358",
-            "longitude": "-106.3906"     
+            "longitude": "-106.3906"
         }
 	},
 	{
@@ -51,12 +51,12 @@ db.dinosaurs.insertMany([
 		"info": "Brachiosaurus was a sauropod that had very long front legs and a long, flexible neck. It weighed as much as 30–50 tonnes, which is about the same as 12 African elephants. This dinosaur’s long neck helped it to feed at an incredible height of 15m (49ft). It used its spoon-shaped teeth to snip off leaves from trees like conifers and tree ferns. Brachiosaurus ate about 200kg (440lb) of leaves and twigs per day.  ",
         "images": {
             "compareToHuman": "http://www.prehistoric-wildlife.com/images/species/b/brachiosaurus-size.jpg",
-            "dinoImage": "https://www.thoughtco.com/thmb/zbBHNerDgv55ppn0kqn_ikcH8iQ=/768x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-680791823-59af09edaad52b0010486221.jpgs"
+            "dinoImage": "https://www.wildrepublic.com/wp-content/uploads/2018/07/Brachiosaurus-3025-xl.jpg"
         },
         "location": {
             "continent": "North America",
             "latitude": "39.0761",
-            "longitude": "-108.647"     
+            "longitude": "-108.647"
         }
 	},
 	{
@@ -75,7 +75,7 @@ db.dinosaurs.insertMany([
         "location": {
             "continent": "Europe",
             "latitude": "45.7797",
-            "longitude": "5.5486"     
+            "longitude": "5.5486"
         }
 	},
 	{
@@ -94,7 +94,7 @@ db.dinosaurs.insertMany([
         "location": {
             "continent": "North America",
             "latitude": "50.7413",
-            "longitude": "-111.5759"     
+            "longitude": "-111.5759"
         }
 	},
 	{
@@ -113,7 +113,7 @@ db.dinosaurs.insertMany([
         "location": {
             "continent": "Asia",
             "latitude": "44",
-            "longitude": "142"     
+            "longitude": "142"
         }
 	},
 	{
@@ -132,7 +132,7 @@ db.dinosaurs.insertMany([
         "location": {
             "continent": "Africa",
             "latitude": "-9.7118",
-            "longitude": "39.2238"     
+            "longitude": "39.2238"
         }
 	},
 	{
@@ -151,7 +151,7 @@ db.dinosaurs.insertMany([
         "location": {
             "continent": "Asia",
             "latitude": "23.1687",
-            "longitude": "79.9723"     
+            "longitude": "79.9723"
         }
 	},
 	{
@@ -170,7 +170,7 @@ db.dinosaurs.insertMany([
         "location": {
             "continent": "Asia",
             "latitude": "43.6644",
-            "longitude": "100.9019"     
+            "longitude": "100.9019"
         }
 	},
 	{
@@ -189,7 +189,7 @@ db.dinosaurs.insertMany([
         "location": {
             "continent": "Australia",
             "latitude": "-26.425",
-            "longitude": "148.7925"     
+            "longitude": "148.7925"
         }
 	},
 	{
@@ -208,7 +208,7 @@ db.dinosaurs.insertMany([
         "location": {
             "continent": "Africa",
             "latitude": "8.3451",
-            "longitude": "14.7915"     
+            "longitude": "14.7915"
         }
 	},
 	{
@@ -227,7 +227,7 @@ db.dinosaurs.insertMany([
         "location": {
             "continent": "North America",
             "latitude": "50.7501",
-            "longitude": "-111.4886"     
+            "longitude": "-111.4886"
         }
 	},
 	{
@@ -246,7 +246,7 @@ db.dinosaurs.insertMany([
         "location": {
             "continent": "Africa",
             "latitude": "30.905",
-            "longitude": "-3.855"     
+            "longitude": "-3.855"
         }
 	},
 	{
@@ -265,7 +265,7 @@ db.dinosaurs.insertMany([
         "location": {
             "continent": "North America",
             "latitude": "46.3819",
-            "longitude": "-103.9644"     
+            "longitude": "-103.9644"
         }
 	},
 	{
@@ -284,7 +284,7 @@ db.dinosaurs.insertMany([
         "location": {
             "continent": "North America",
             "latitude": "38.8261",
-            "longitude": "-109.5679"     
+            "longitude": "-109.5679"
         }
 	},
 	{
@@ -303,7 +303,7 @@ db.dinosaurs.insertMany([
         "location": {
             "continent": "Africa",
             "latitude": "-16.8083",
-            "longitude": "28.275"     
+            "longitude": "28.275"
         }
 	},
 	{
@@ -322,7 +322,7 @@ db.dinosaurs.insertMany([
         "location": {
             "continent": "North America",
             "latitude": "49.5072",
-            "longitude": "-111.3569"     
+            "longitude": "-111.3569"
         }
 	},
 	{
@@ -341,7 +341,7 @@ db.dinosaurs.insertMany([
         "location": {
             "continent": "North America",
             "latitude": "44.5133",
-            "longitude": "-107.9022"     
+            "longitude": "-107.9022"
         }
 	}
 ]
