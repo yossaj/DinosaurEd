@@ -11,15 +11,16 @@ DinoGridItem.prototype.render = function(){
     for(const dinosaur of this.dinosaurs){
         const listContainer = document.createElement('div')
         listContainer.classList.add('dino-box')
+
         listContainer.onclick = function () {
           var i, x
-          debugger;
           x = document.getElementsByClassName("containerTab");
           for (i = 0; i < x.length; i++) {
             x[i].style.display = "none";
           }
           document.getElementById(dinosaur._id).style.display = "block";
         }
+
         const name = document.createElement('h3')
         name.textContent = dinosaur.name
         const image = document.createElement('img')
