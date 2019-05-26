@@ -56,4 +56,4 @@ Dinosaurs.prototype.publishDinosaursByDiet = function (dietIndex) {
   
 };
 
-module.exports = Dinosaurs
+module.exports = Dinosaurs;
