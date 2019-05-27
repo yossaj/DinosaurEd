@@ -130,13 +130,6 @@ DinoDetailView.prototype.render = function(){
       }
 }
 
-// DinoDetailView.prototype.getLocation = function(showMap){
-//   shopMap.addEventListener('click', (evt)=>{
-//     console.log('hiiii')
-//   })
-
-// }
-
 
 
 module.exports = DinoDetailView;

@@ -8,9 +8,17 @@ const Dinosaurs = function(url) {
 Dinosaurs.prototype.bindEvents = function() {
     PubSub.subscribe('SelectView:Dinosaurs-diet-change', event => {
         const dietIndex = event.detail
+        console.log(event.detail)
+        if (dietIndex === 'none') {
+          const request = new RequestHelper(this.url);
+          request.get()
+          .then((dinosaurs) => {
+              this.dinoData = dinosaurs
+              PubSub.publish('Dinosaurs:data-ready', dinosaurs)
+          })
+          .catch(console.error);
+        }
         this.publishDinosaursByDiet(dietIndex);
-      
-        
       })
 };
 
@@ -19,7 +27,7 @@ Dinosaurs.prototype.getData = function() {
     request.get()
     .then((dinosaurs) => {
         this.dinoData = dinosaurs
-        PubSub.publish('Dinosaurs:data-loaded', dinosaurs)
+        PubSub.publish('Dinosaurs:data-ready', dinosaurs)
         this.publishDietTypes(dinosaurs);
     })
     .catch(console.error);
@@ -53,7 +61,7 @@ Dinosaurs.prototype.publishDinosaursByDiet = function (dietIndex) {
   const dinosaursByDiet = this.dinosaursByDiet(dietIndex);
   PubSub.publish('Dinosaurs:data-ready', dinosaursByDiet);
   // console.log(dinosaursByDiet);
-  
+
 };
 
 
