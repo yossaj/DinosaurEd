@@ -24,9 +24,9 @@ DinoDetailView.prototype.render = function(){
         dinoHeader.textContent = dinosaur.name
         headerDiv.appendChild(dinoHeader);
 
-        const nameMeaning = document.createElement('h3');
-        nameMeaning.textContent = `Meaning of Name: "${dinosaur.meaningOfName}"`
-        headerDiv.appendChild(nameMeaning)
+        const diet = document.createElement('h3');
+        diet.textContent = dinosaur.diet
+        headerDiv.appendChild(diet)
 
         detailContainer.appendChild(headerDiv);
 
@@ -51,13 +51,13 @@ DinoDetailView.prototype.render = function(){
         info.classList.add('info')
         infoStats.appendChild(info);
 
-        const diet = document.createElement('h4')
-        diet.textContent = "Diet:"
-        info.appendChild(diet);
+        const nameMeaning = document.createElement('h4')
+        nameMeaning.textContent = "Meaning of Name:"
+        info.appendChild(nameMeaning);
 
-        const dietParagraph = document.createElement('p')
-        dietParagraph.textContent = dinosaur.diet
-        info.appendChild(dietParagraph);
+        const nameParagraph = document.createElement('p')
+        nameParagraph.textContent = `"${dinosaur.meaningOfName}"`
+        info.appendChild(nameParagraph);
 
         const continent = document.createElement('h4')
         continent.textContent = "Continent:"
