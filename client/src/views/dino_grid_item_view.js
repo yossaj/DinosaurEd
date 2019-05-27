@@ -1,5 +1,5 @@
 const PubSub = require('../helpers/pub_sub.js')
-
+const Map = require('./map_view.js')
 
 const DinoGridItem = function (dinosaurs, container) {
     this.dinosaurs = dinosaurs
@@ -12,7 +12,7 @@ const DinoGridItem = function (dinosaurs, container) {
 DinoGridItem.prototype.render = function(){
     this.container.innerHTML = ""
 
-    // const map = new Map()
+    const map = new Map()
     
     
     for(const dinosaur of this.dinosaurs){
@@ -30,20 +30,20 @@ DinoGridItem.prototype.render = function(){
 
           
 
-          // const mapDiv = document.querySelector('#mapid')
+          const mapDiv = document.querySelector('#mapid')
           
-          // if(mapDiv.classList.contains("off")){
-          //   mapDiv.classList.remove("off")
-          //   map.render()
-          // }
-          // console.log(dinosaur)
-          // let lat = dinosaur.location.latitude
-          // let long = dinosaur.location.longitude
-          // console.log(long,lat);
+          if(mapDiv.classList.contains("off")){
+            mapDiv.classList.remove("off")
+            map.render()
+          }
+          console.log(dinosaur)
+          let lat = dinosaur.location.latitude
+          let long = dinosaur.location.longitude
+          console.log(long,lat);
           
         
-          // map.setPosition(long,lat)
-          // map.addMarker(lat,long)
+          map.setPosition(long,lat)
+          map.addMarker(lat,long)
         }
 
         const name = document.createElement('h3')
