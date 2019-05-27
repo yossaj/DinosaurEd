@@ -74,18 +74,32 @@ h1 {
 }
 
 .containerTab h2 {
-  width: 100%;
-  margin-left: 20px;
-  margin-bottom: 10px;
+  margin: 0;
+  width: 30%;
   text-transform: uppercase;
   font-size: 30px;
-  color: gray;
+  color: #BF2900;
+  padding-right: 5px;
 }
 
-.contents {
+.containerTab h3 {
+  color: gray;
+  padding-left: 5px;
+  margin: 0 0 0 10px;
+}
+
+#pronunciation {
+  margin-top: 5px;
+  margin-left: 20px;
+  color: #0085BF;
+}
+
+.headerDiv {
+  margin-left: 20px;
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .contents p {
@@ -95,25 +109,39 @@ h1 {
   color: gray;
 }
 
-.contents img {
-  border-radius: 40px;
-  padding: 20px 0 20px 20px;
-  width: 50%;
-  height: 50%;
-}
-
 .contents h4 {
   font-size: 20px;
   margin: 0;
   color: #A2F232;
 }
 
+.info-stats {
+  width 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.info-stats img {
+  border-radius: 30px;
+  margin: 20px 0 20px 20px;
+  width: 70%;
+  height: 60%;
+}
+
+#comparison-img {
+  width: 90%;
+  border-radius: 30px;
+  margin: 20px;
+}
+
 .info {
+  width: 40%;
   padding: 20px;
 }
 
-.info img {
-  width: auto;
+.info-paragraph {
+  padding: 20px;
 }
 
 
@@ -180,7 +208,7 @@ h1 {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #F4EC07;
+  background: #E53100;
 }
 
 #mapid { height: 480px; }
