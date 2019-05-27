@@ -103,8 +103,6 @@ DinoDetailView.prototype.render = function(){
         infoParagraph.textContent = dinosaur.info
         info.appendChild(infoParagraph);
 
-        contents.appendChild(info);
-
         // const showMap = document.createElement('p')
         // showMap.textContent = 'Where did it live?'
         // showMap.setAttribute('id', 'openMap')
