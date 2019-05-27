@@ -202,13 +202,8 @@ h1 {
 
 /* Track */
 ::-webkit-scrollbar-track {
-<<<<<<< HEAD
-  background: #F13721;
-  border-radius: 0 0 10px 10px;
-=======
   border-radius: 0 0 10px 10px;
   background: #F4EC07;
->>>>>>> f90ddb4f475155b7a7bc8f7e6b800ab32463e401
 }
 
 /* Handle */
