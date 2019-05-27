@@ -6,14 +6,14 @@ const DinoGridItem = function (dinosaurs, container) {
     this.container = container
     // console.log(container)
     
-    // this.map = map
+    
 }
 
 DinoGridItem.prototype.render = function(){
     this.container.innerHTML = ""
 
     const map = new Map()
-    console.log(map);
+    
     
     for(const dinosaur of this.dinosaurs){
       
@@ -28,6 +28,8 @@ DinoGridItem.prototype.render = function(){
           }
           document.getElementById(dinosaur._id).style.display = "block";
 
+          
+
           const mapDiv = document.querySelector('#mapid')
           
           if(mapDiv.classList.contains("off")){
@@ -41,6 +43,7 @@ DinoGridItem.prototype.render = function(){
           
         
           map.setPosition(long,lat)
+          map.addMarker(lat,long)
         }
 
         const name = document.createElement('h3')
@@ -65,6 +68,10 @@ DinoGridItem.prototype.openTab = function (tabName) {
   document.getElementById(tabName).style.display = "block";
 
 }
+
+
+
+
 
 
 module.exports = DinoGridItem;
