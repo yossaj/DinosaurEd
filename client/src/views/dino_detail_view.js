@@ -1,4 +1,5 @@
 const PubSub = require('../helpers/pub_sub.js')
+const Map = require('./map_view.js')
 
 
 const DinoDetailView = function (dinosaurs, detailContainer) {
@@ -48,6 +49,18 @@ DinoDetailView.prototype.render = function(){
 
         contents.appendChild(info);
 
+        const showMap = document.createElement('p')
+        showMap.textContent = 'Where did it live?'
+        showMap.setAttribute('id', 'openMap')
+        info.appendChild(showMap)
+        const getDetails = document.getElementById('openMap')
+        if(getDetails !== null){
+        getDetails.addEventListener('click', (evt) => {
+        console.log('hiiii')
+        })}
+
+
+
         // const comparisonDiv = document.createElement('div');
         // comparisonDiv.classList.add('comparison')
         //
@@ -60,9 +73,14 @@ DinoDetailView.prototype.render = function(){
         detailContainer.appendChild(contents);
         this.container.appendChild(detailContainer);
       }
-
-
 }
+
+// DinoDetailView.prototype.getLocation = function(showMap){
+//   shopMap.addEventListener('click', (evt)=>{
+//     console.log('hiiii')
+//   })
+
+// }
 
 
 
