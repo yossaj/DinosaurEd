@@ -163,6 +163,12 @@ h1 {
   width: 150px;
 } */
 
+@media only screen and (min-width: 601px) {
+  div.example {
+    font-size: 80px;
+  }
+}
+
 
 @media only screen and (max-width: 768px){
   #grid-view{
@@ -196,13 +202,8 @@ h1 {
 
 /* Track */
 ::-webkit-scrollbar-track {
-<<<<<<< HEAD
   border-radius: 0 0 10px 10px;
   background: #F4EC07;
-=======
-  background: #F13721;
-  border-radius: 0 0 10px 10px;
->>>>>>> develop
 }
 
 /* Handle */
