@@ -5,6 +5,7 @@ const DinoDetailView = require('./dino_detail_view.js')
 const DinoGrid = function(gridContainer, detailContainer){
     this.gridContainer = gridContainer;
     this.detailContainer = detailContainer;
+    
 }
 
 DinoGrid.prototype.bindEvents = function(){
@@ -15,6 +16,7 @@ DinoGrid.prototype.bindEvents = function(){
 
     PubSub.subscribe('Dinosaurs:data-ready', (event)=>{
         this.render(event.detail, this.gridContainer, this.detailContainer)
+       
     })
 }
 

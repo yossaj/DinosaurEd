@@ -1,5 +1,6 @@
 const PubSub = require('../helpers/pub_sub.js')
 
+
 const DinoDetailView = function (dinosaurs, detailContainer) {
   this.dinosaurs = dinosaurs;
   this.container = detailContainer
@@ -11,6 +12,7 @@ DinoDetailView.prototype.render = function(){
         const detailContainer = document.createElement('div');
 
         detailContainer.id = (dinosaur._id);
+        
         detailContainer.classList.add('containerTab');
         detailContainer.setAttribute("style", "display: none;");
 
@@ -58,6 +60,7 @@ DinoDetailView.prototype.render = function(){
         detailContainer.appendChild(contents);
         this.container.appendChild(detailContainer);
       }
+
 
 }
 
