@@ -1,11 +1,8 @@
 body {
-  /* background-image: url(https://d1t80wr11ktjcz.cloudfront.net/wp-content/uploads/2018/07/dr-ian-malcolm-jurassic-park-jeff-goldblum-chaos-e1531929342928.jpeg); */
+
   color: aliceblue;
-  background-color: #18C8FF;
-}
-
-
-body {
+  background-image: linear-gradient(to right, #00B2FF, #AEFF00);
+  margin-bottom: 50px;
 
   grid-template-columns: 1fr;
   grid-template-rows: ;
@@ -38,7 +35,14 @@ main{
   background-color: white;
 }
 
+header {
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
+  margin: 20px;
+  padding: 10px;
   font-size: 70px;
   font-weight: 800;
   color: #FF9605;
@@ -164,6 +168,12 @@ h1 {
 /* #grid-view img{
   width: 150px;
 } */
+
+
+#mapid {
+  border-radius: 20px;
+  margin: 20px;
+}
 
 @media only screen and (min-width: 2000px) {
 
