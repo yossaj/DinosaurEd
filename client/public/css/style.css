@@ -29,8 +29,8 @@ footer {
   justify-content: center;
 }
 
-main{
-  padding: 10px 0;
+main {
+  padding-top: 10px;
   border: 10px solid;
   border-color: #A2F232;
   border-radius: 20px;
@@ -96,8 +96,8 @@ h1 {
 }
 
 .contents img {
-  border-radius: 40px;
-  padding: 20px 0 20px 20px;
+  border-radius: 30px;
+  margin: 20px 0 20px 20px;
   width: 50%;
   height: 50%;
 }
@@ -168,16 +168,17 @@ h1 {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #F13721;
+  border-radius: 0 0 10px 10px;
+  background: #F4EC07;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
   background: #FF9605;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #F4EC07;
+  background: #E53100;
 }
