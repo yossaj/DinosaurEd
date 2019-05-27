@@ -32,8 +32,9 @@ main{
   border-color: #97D800;
   border-radius: 20px;
   margin: 20px;
-  padding-top: 20px;
+  padding-top: 10px;
   background-color: white;
+  overflow-y: hidden;
 }
 
 header {
@@ -52,6 +53,7 @@ h1 {
 }
 
 .dino-box {
+  height: 200px;
   min-width: 300px;
   /* height: 200px; */
   flex-basis: 20%;
@@ -60,6 +62,7 @@ h1 {
   /* align-items: stretch; */
   padding: 10px;
   justify-content: center;
+  overflow-y: hidden;
 }
 
 .dino-box h3 {
@@ -70,6 +73,13 @@ h1 {
 .dino-box img {
   border-radius: 20px;
   height: 150px;
+}
+
+.grow {
+  transition: all .2s ease-in-out;
+}
+.grow:hover {
+  transform: scale(1.05);
 }
 
 .containerTab {
@@ -158,10 +168,12 @@ h1 {
 
 
 #grid-view{
+  padding-top: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   overflow-x: scroll;
+  overflow-y: hidden;
   border: 0 solid;
   border-radius: 20px;
   /* display: grid;
@@ -207,6 +219,18 @@ h1 {
     font-size: 50px;
   }
 
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+  div.info-stats {
+    flex-direction: column;
+  }
+  div.info-stats img {
+    width: 20px;
+  }
 }
 
 

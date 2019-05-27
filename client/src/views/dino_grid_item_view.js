@@ -19,6 +19,7 @@ DinoGridItem.prototype.render = function(){
 
         const listContainer = document.createElement('div')
         listContainer.classList.add('dino-box')
+        listContainer.classList.add('grow')
 
         listContainer.onclick = function () {
           var i, x
