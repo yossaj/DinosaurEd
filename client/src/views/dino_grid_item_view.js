@@ -28,8 +28,9 @@ DinoGridItem.prototype.render = function(){
             x[i].style.display = "none";
           }
           document.getElementById(dinosaur._id).style.display = "block";
-
-          const roar = new Audio('http://animal.memozee.com/animal/SOUND/JurassicPark-Tyrannosaurus_rex-Roaring.wav');
+          
+          console.log("can you hear me",dinosaur.audio)
+          const roar = new Audio(dinosaur.audio);
           roar.play();
 
 

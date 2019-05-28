@@ -19,7 +19,8 @@ db.dinosaurs.insertMany([
             "continent": "North America",
             "latitude": "41.9014",
             "longitude": "-106.0792"
-        }
+        },
+        "audio": "http://www.amodinosaur.com/Uploads/file/20150914/1442235788535951.wav"
 	},
 	{
 		"name": "Apatosaurus",
@@ -38,7 +39,8 @@ db.dinosaurs.insertMany([
             "continent": "North America",
             "latitude": "42.0358",
             "longitude": "-106.3906"
-        }
+        },
+        "audio": "http://www.amodinosaur.com/Uploads/file/20150915/1442247057483234.wav"
 	},
 	{
 		"name": "Brachiosaurus",
@@ -57,7 +59,8 @@ db.dinosaurs.insertMany([
             "continent": "North America",
             "latitude": "39.0761",
             "longitude": "-108.647"
-        }
+        },
+        "audio": "http://www.amodinosaur.com/Uploads/file/20150915/1442247125284308.wav"
 	},
 	{
 		"name": "Compsognathus",
@@ -76,7 +79,8 @@ db.dinosaurs.insertMany([
             "continent": "Europe",
             "latitude": "45.7797",
             "longitude": "5.5486"
-        }
+        },
+        "audio": "http://www.amodinosaur.com/Uploads/file/20150914/1442235739984722.wav"
 	},
 	{
 		"name": "Dracorex",
@@ -95,7 +99,8 @@ db.dinosaurs.insertMany([
             "continent": "North America",
             "latitude": "50.7413",
             "longitude": "-111.5759"
-        }
+        },
+        "audio": "http://www.moviesoundclips.net/movies1/jurassicpark/pile.mp3"
 	},
 	{
 		"name": "Elasmosaurus",
@@ -114,7 +119,8 @@ db.dinosaurs.insertMany([
             "continent": "Asia",
             "latitude": "44",
             "longitude": "142"
-        }
+        },
+        "audio": "http://www.dolphinear.com/de600-samples-gray.wav"
 	},
 	{
 		"name": "Giraffatitan",
@@ -133,7 +139,8 @@ db.dinosaurs.insertMany([
             "continent": "Africa",
             "latitude": "-9.7118",
             "longitude": "39.2238"
-        }
+        },
+        "audio": "http://www.ringelkater.de/Sounds/2geraeusche_tiere/dino_stegosaurus.wav"
 	},
 	{
 		"name": "Indosuchus",
@@ -152,7 +159,8 @@ db.dinosaurs.insertMany([
             "continent": "Asia",
             "latitude": "23.1687",
             "longitude": "79.9723"
-        }
+        },
+        "audio": "http://www.tafelrunde.net/hlds/sound/ambience/mtrex.wav"
 	},
 	{
 		"name": "Khaan",
@@ -171,7 +179,8 @@ db.dinosaurs.insertMany([
             "continent": "Asia",
             "latitude": "43.6644",
             "longitude": "100.9019"
-        }
+        },
+        "audio": "http://www.kountrylife.com/sounds/gobble.wav"
 	},
 	{
 		"name": "Minmi",
@@ -190,7 +199,8 @@ db.dinosaurs.insertMany([
             "continent": "Australia",
             "latitude": "-26.425",
             "longitude": "148.7925"
-        }
+        },
+        "audio": "http://www.amodinosaur.com/Uploads/file/20150915/1442247048340208.wav"
 	},
 	{
 		"name": "Ouranosaurus",
@@ -209,7 +219,8 @@ db.dinosaurs.insertMany([
             "continent": "Africa",
             "latitude": "8.3451",
             "longitude": "14.7915"
-        }
+        },
+        "audio": "http://www.amodinosaur.com/Uploads/file/20150915/1442247083921115.wav"
 	},
 	{
 		"name": "Parasaurolophus",
@@ -228,7 +239,8 @@ db.dinosaurs.insertMany([
             "continent": "North America",
             "latitude": "50.7501",
             "longitude": "-111.4886"
-        }
+        },
+        "audio": "http://www.ringelkater.de/Sounds/2geraeusche_tiere/dino_parasaurolophus.wav"
 	},
 	{
 		"name": "Spinosaurus",
@@ -247,7 +259,8 @@ db.dinosaurs.insertMany([
             "continent": "Africa",
             "latitude": "30.905",
             "longitude": "-3.855"
-        }
+        },
+        "audio": "http://www.ringelkater.de/Sounds/2geraeusche_tiere/dino_tyrannosaurus1.wav"
 	},
 	{
 		"name": "Tyrannosaurus",
@@ -266,7 +279,8 @@ db.dinosaurs.insertMany([
             "continent": "North America",
             "latitude": "46.3819",
             "longitude": "-103.9644"
-        }
+        },
+        "audio": "http://www.moviesoundclips.net/movies1/jurassicpark/trex.mp3"
 	},
 	{
 		"name": "Utahraptor",
@@ -285,7 +299,8 @@ db.dinosaurs.insertMany([
             "continent": "North America",
             "latitude": "38.8261",
             "longitude": "-109.5679"
-        }
+        },
+        "audio": "http://www.amodinosaur.com/Uploads/file/20150914/1442235710598252.wav"
 	},
 	{
 		"name": "Vulcanodon",
@@ -304,7 +319,9 @@ db.dinosaurs.insertMany([
             "continent": "Africa",
             "latitude": "-16.8083",
             "longitude": "28.275"
-        }
+        },
+        "audio": "http://www.wavsource.com/snds_2018-06-03_5106726768923853/tv/star_trek/2-26_live_long1.wav"
+        
 	},
 	{
 		"name": "Xenoceratops",
@@ -323,7 +340,8 @@ db.dinosaurs.insertMany([
             "continent": "North America",
             "latitude": "49.5072",
             "longitude": "-111.3569"
-        }
+        },
+        "audio": "http://www.amodinosaur.com/Uploads/file/20150915/1442247109844184.wav"
 	},
 	{
 		"name": "Zephyrosaurus",
@@ -342,7 +360,8 @@ db.dinosaurs.insertMany([
             "continent": "North America",
             "latitude": "44.5133",
             "longitude": "-107.9022"
-        }
+        },
+        "audio": "http://www.amodinosaur.com/Uploads/file/20150914/1442235759158134.wav"
 	}
 ]
 
