@@ -1,7 +1,7 @@
 const PubSub = require('../../helpers/pub_sub.js')
 
-const QuizQuestionView = function (dinosaur, quizContainer) {
-  this.dinosaur = dinosaur
+const QuizQuestionView = function (dinosaurs, quizContainer) {
+  this.dinosaurs = dinosaurs
   this.quizContainer = quizContainer
   this.dietList = []
 }
@@ -12,19 +12,26 @@ QuizQuestionView.prototype.bindEvents = function() {
   })
 }
 
+QuizQuestionView.prototype.randomDinosaur = function () {
+  const randomDinosaur = this.dinosaurs[Math.floor(Math.random()*this.dinosaurs.length)];
+  return randomDinosaur
+}
+
 
 QuizQuestionView.prototype.renderQuestion = function() {
+
+  const randomDinosaur = this.randomDinosaur();
 
   const question = document.createElement('div')
   question.classList.add('question')
 
-  const questionStatement = document.createElement('p')
-  questionStatement.textContent = `What is the diet of ${dinosaur.name}?`
-  questionForm.appendChild(questionStatement);
-
   const questionForm = document.createElement('form')
   questionForm.classList.add('question-form')
   question.appendChild(questionForm)
+
+  const questionStatement = document.createElement('p')
+  questionStatement.textContent = `What is the diet of the ${randomDinosaur.name}?`
+  questionForm.appendChild(questionStatement);
 
   for(const diet of this.dietList){
 
@@ -39,12 +46,10 @@ QuizQuestionView.prototype.renderQuestion = function() {
 
     questionForm.appendChild(radioChoiceLabel);
   }
+
+  return question
 }
 
-
-
-  // return question div element
-// }
 
 
 module.exports = QuizQuestionView;

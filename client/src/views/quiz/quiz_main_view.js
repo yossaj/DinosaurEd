@@ -8,6 +8,7 @@ const QuizMainView = function (quizContainer) {
 QuizMainView.prototype.bindEvents = function () {
   PubSub.subscribe('Dinosaurs:data-ready', (event)=>{
       this.dinosaurs = event.detail;
+      this.renderQuiz();
   })
 }
 
@@ -15,8 +16,10 @@ QuizMainView.prototype.renderQuiz = function () {
   var i
   for (i = 0; i < 4; i++) {
   const question = new QuizQuestionView(this.dinosaurs, this.quizContainer);
-  question.renderQuestion();
+  const questionElement = question.renderQuestion();
+  this.quizContainer.appendChild(questionElement)
   }
+
 }
 
 

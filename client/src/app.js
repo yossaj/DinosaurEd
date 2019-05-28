@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const quizToggleView = new QuizToggleView(quizToggle);
     quizToggleView.bindEvents();
 
-    const quizContainer = document.querySelector('div#quiz');
+    const quizContainer = document.querySelector('div#quiz-div');
     const mainQuiz = new QuizMainView(quizContainer);
     mainQuiz.bindEvents();
 

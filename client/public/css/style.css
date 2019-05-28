@@ -186,6 +186,17 @@ h1 {
   width: 150px;
 } */
 
+/* QUIZ DIV */
+
+
+#quiz-div {
+  border: 10px solid;
+  border-color: #97D800;
+  border-radius: 20px;
+  margin: 20px;
+  padding-top: 10px;
+  background-color: white;
+}
 
 #mapid {
   border-radius: 20px;
@@ -285,4 +296,3 @@ h1 {
 }
 
 #mapid { height: 480px; }
-
