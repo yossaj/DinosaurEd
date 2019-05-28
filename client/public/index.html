@@ -6,22 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+        crossorigin=""></script>
     <title>DINOPEDIA</title>
+    <link rel="icon" href="./images/tyrannosaurus-green.png">
 </head>
 <body>
     <header>
-         <h1>Dinosaurs</h1>
+         <h1>Dinosaur Hub</h1>
     </header>
 
     <aside>
         <select class="select-css" id="diet" style="width:200px;">
-            <option value="">Please Select a Diet</option>
+            <option value="none">Please Select a Diet</option>
         </select>
     </aside>
 
     <main>
     <div id="grid-view" ></div>
     </main>
-    <div id="detail-view"></div>
+    <div id="detail-view">
+
+
+
+    </div>
+
+    <div id="mapid" class="off"></div>
+
+
+
+
+    
+    <div class="dino">
+        <img src="./images/dino01.png" alt="" id="dinop" onclick="playAudio()">
+    </div>
+
+
 </body>
 </html>

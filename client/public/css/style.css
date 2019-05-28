@@ -1,11 +1,8 @@
 body {
-  /* background-image: url(https://d1t80wr11ktjcz.cloudfront.net/wp-content/uploads/2018/07/dr-ian-malcolm-jurassic-park-jeff-goldblum-chaos-e1531929342928.jpeg); */
+
   color: aliceblue;
-  background-color: #18C8FF;
-}
-
-
-body {
+  background-image: linear-gradient(to right, #00B2FF, #42EDDC);
+  margin-bottom: 50px;
 
   grid-template-columns: 1fr;
   grid-template-rows: ;
@@ -32,21 +29,31 @@ footer {
 main{
   /* padding: 10px 0; */
   border: 10px solid;
-  border-color: #A2F232;
+  border-color: #97D800;
   border-radius: 20px;
   margin: 20px;
+  padding-top: 10px;
   background-color: white;
+  overflow-y: hidden;
+}
+
+header {
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
+  margin: 20px;
+  padding: 10px;
   font-size: 70px;
   font-weight: 800;
-  color: #FF9605;
-  -webkit-text-stroke-width: 4px;
-   -webkit-text-stroke-color: white;
+  color: #F4EC07;
+  -webkit-text-stroke-width: 3px;
+   -webkit-text-stroke-color: #FF9605;
 }
 
 .dino-box {
+  height: 200px;
   min-width: 300px;
   /* height: 200px; */
   flex-basis: 20%;
@@ -55,14 +62,24 @@ h1 {
   /* align-items: stretch; */
   padding: 10px;
   justify-content: center;
+  overflow-y: hidden;
 }
 
 .dino-box h3 {
-  color: gray;
+  text-align: center;
+  color: #FF2323;
 }
 
 .dino-box img {
+  border-radius: 20px;
   height: 150px;
+}
+
+.grow {
+  transition: all .2s ease-in-out;
+}
+.grow:hover {
+  transform: scale(1.05);
 }
 
 .containerTab {
@@ -74,15 +91,32 @@ h1 {
 }
 
 .containerTab h2 {
-  width: 100%;
-  margin-left: 20px;
-  margin-bottom: 10px;
+  margin: 0;
+  width: 30%;
   text-transform: uppercase;
-  font-size: 30px;
-  color: gray;
+  font-size: 35px;
+  color: #18C8FF;
+  padding-right: 5px;
 }
 
-.contents {
+.containerTab h3 {
+  font-size: 30px;
+  color: #97D800;
+  text-transform: uppercase;
+  padding-left: 5px;
+  margin: 0 0 0 20px;
+}
+
+#pronunciation {
+  text-transform: none;
+  margin-top: 5px;
+  margin-left: 20px;
+  color: #0085BF;
+}
+
+.headerDiv {
+  margin: 0 20px;
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -90,39 +124,56 @@ h1 {
 
 .contents p {
   margin-top: 10px;
-  font-size: 18px;
+  font-size: 25px;
   padding-right: 10px;
   color: gray;
 }
 
-.contents img {
-  border-radius: 40px;
-  padding: 20px 0 20px 20px;
-  width: 50%;
-  height: 50%;
-}
-
 .contents h4 {
-  font-size: 20px;
+  font-size: 25px;
   margin: 0;
   color: #A2F232;
 }
 
+.info-stats {
+  width 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.info-stats img {
+  border-radius: 30px;
+  margin: 20px 0 20px 20px;
+  width: 70%;
+  height: 60%;
+}
+
+#comparison-img {
+  width: 90%;
+  border-radius: 30px;
+  margin: 20px;
+}
+
 .info {
+  text-transform: capitalize;
+  width: 40%;
   padding: 20px;
 }
 
-.info img {
-  width: auto;
+.info-paragraph {
+  padding: 20px;
 }
 
 
 
 #grid-view{
+  padding-top: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   overflow-x: scroll;
+  overflow-y: hidden;
   border: 0 solid;
   border-radius: 20px;
   /* display: grid;
@@ -134,6 +185,53 @@ h1 {
 /* #grid-view img{
   width: 150px;
 } */
+
+
+#mapid {
+  border-radius: 20px;
+  margin: 20px;
+}
+
+@media only screen and (min-width: 2000px) {
+
+  h1 {
+    margin: 10px;
+    font-size: 12rem;
+  }
+
+  div.dino-box h3 {
+    font-size: 40px;
+  }
+
+  div.contents p {
+    font-size: 40px;
+  }
+  div.headerDiv h2 {
+    font-size: 70px;
+  }
+  div.headerDiv h3 {
+    font-size: 50px;
+  }
+  div.contents h4 {
+    font-size: 50px;
+  }
+  #pronunciation {
+    font-size: 50px;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+  div.info-stats {
+    flex-direction: column;
+  }
+  div.info-stats img {
+    width: 20px;
+  }
+}
 
 
 @media only screen and (max-width: 768px){
@@ -149,15 +247,18 @@ h1 {
 }
 
 .select-css {
-    font-size: 16px;
-    line-height: 1.3;
-    padding: .6em 1.4em .5em .8em;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    font-family: Proxima Soft, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 10px 10px 18px;
     -webkit-appearance: none;
-    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
-      linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
-    background-repeat: no-repeat, repeat;
-    background-position: right .7em top 50%, 0 0;
-    background-size: .65em auto, 100%;
+    background-color: #FF9605;
+    /* background-repeat: no-repeat, repeat;
+    background-size: .65em auto, 100%; */
 }
 
 /* width */
@@ -168,8 +269,8 @@ h1 {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #F13721;
   border-radius: 0 0 10px 10px;
+  background: #F4EC07;
 }
 
 /* Handle */
@@ -180,5 +281,8 @@ h1 {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #F4EC07;
+  background: #E53100;
 }
+
+#mapid { height: 480px; }
+
