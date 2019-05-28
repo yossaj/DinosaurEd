@@ -1,24 +1,120 @@
 
-const SpeakingDino = function(div){
+const SpeakingDino = function(div, recordBut){
     this.div = div
+    this.recordBut = recordBut
     this.images = []
+   
 }
 
 SpeakingDino.prototype.bindEvents = function(){
     this.populateImages(this.images)
-   
+
+    this.recordBut.addEventListener('click', (evt)=>{
+        console.log('beeebeee')
+        recordStop()
+    })
 
     this.div.addEventListener('click', (evt) => {
-        
-       this.openClose(this.div, this.images)
+         this.openClose(this.div, this.images)
+         
     })
    
     
 }
 
+
+const recordAudio = () =>
+    new Promise(async resolve => {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        const mediaRecorder = new MediaRecorder(stream);
+        const audioChunks = [];
+        mediaRecorder.addEventListener("dataavailable", event => {
+            audioChunks.push(event.data);
+        });
+        const start = () => mediaRecorder.start();
+        const stop = () =>
+            new Promise(resolve => {
+                mediaRecorder.addEventListener("stop", () => {
+                    const audioBlob = new Blob(audioChunks);
+                    const audioUrl = URL.createObjectURL(audioBlob);
+                    const audio = new Audio(audioUrl);
+                    const play = () => audio.play();
+                    resolve({ audioBlob, audioUrl, play });
+                });
+                mediaRecorder.stop();
+            });
+        resolve({ start, stop });
+    });
+let recorder = null;
+let audio = null;
+
+
+const recordStop = async () => {
+    console.log("this is recorder",recorder)
+    if (recorder) {
+        audio = await recorder.stop();
+        recorder = null;
+        document.querySelector("#record-stop-button").textContent = "Record";
+        document.querySelector("#dinop").removeAttribute("disabled");
+    } else {
+        recorder = await recordAudio();
+        recorder.start();
+        document.querySelector("#record-stop-button").textContent = "Stop";
+    }
+};
+
+const playAudio = () => {
+    if (audio && typeof audio.play === "function") {
+        audio.play();
+    }
+};
+
+// SpeakingDino.prototype.recordAudio = () =>
+
+//         new Promise(async resolve => {
+//             const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+//             const mediaRecorder = new MediaRecorder(stream);
+//             const audioChunks = [];
+//             mediaRecorder.addEventListener("dataavailable", event => {
+//                 audioChunks.push(event.data);
+//             });
+//             const start = () => mediaRecorder.start();
+//             const stop = () =>
+//                 new Promise(resolve => {
+//                     mediaRecorder.addEventListener("stop", () => {
+//                         const audioBlob = new Blob(audioChunks);
+//                         const audioUrl = URL.createObjectURL(audioBlob);
+//                         const audio = new Audio(audioUrl);
+//                         const play = () => audio.play();
+//                         resolve({ audioBlob, audioUrl, play });
+//                     });
+//                     mediaRecorder.stop();
+//                 });
+//             resolve({ start, stop });
+//     });
+
+
+
+// SpeakingDino.prototype.recordStop = async () => {
+//          let recorder = null;
+//          let audio = null;
+//         // console.log("this is recorder", recorder)
+//         if (recorder) {
+//             audio = await recorder.stop();
+//             recorder = null;
+//             document.querySelector("#record-stop-button").textContent = "Record";
+//             document.querySelector("#dinop").removeAttribute("disabled");
+//         } else {
+//             recorder = await recordAudio();
+//             recorder.start();
+//             document.querySelector("#record-stop-button").textContent = "Stop";
+//         }
+//     };
+
 SpeakingDino.prototype.openClose = function(div, images){
     if (div.src === "http://localhost:3000/images/dino01.png") {
         div.src = images[1]
+        playAudio()
     } else if (div.src === "http://localhost:3000/images/dino02.png"){
         div.src =images[0]
     }

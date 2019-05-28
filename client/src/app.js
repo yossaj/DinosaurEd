@@ -19,8 +19,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const dinoGrid = new DinoGrid(gridContainer, detailContainer);
     dinoGrid.bindEvents();
 
+    const record_butt = document.querySelector('#record-stop-button')
     const speaking_img = document.querySelector('#dinop')
-    const speakingDino = new SpeakingDino(speaking_img)
+    const speakingDino = new SpeakingDino(speaking_img, record_butt)
     speakingDino.bindEvents()
 
     // const dinoGridList = new dinoGridList();
