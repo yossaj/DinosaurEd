@@ -12,6 +12,7 @@
     <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
         integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
         crossorigin=""></script>
+    <script src="js/index.js"></script>
     <title>DINOPEDIA</title>
     <link rel="icon" href="./images/tyrannosaurus-green.png">
 </head>
@@ -41,8 +42,14 @@
 
 
     
-    <div class="dino">
+    <div class="dino-record">
+        <div id="dino-listen">
+            <h3>What do you think this dinosaur sounded like? </h3> 
+        </div>
+        <div>
         <img src="./images/dino01.png" alt="" id="dinop" onclick="playAudio()">
+        <button onclick="recordStop()" id="record-stop-button">Record</button>
+        </div>
     </div>
 
 

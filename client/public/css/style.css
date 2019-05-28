@@ -52,6 +52,28 @@ h1 {
    -webkit-text-stroke-color: #FF9605;
 }
 
+.dino-record{
+ display: grid;
+  grid-template-columns: 3fr 1fr;
+  /* align-content: center; */
+
+  background-image: url("../images/junglebg.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.dino-record img{
+    -webkit-filter: drop-shadow(10px 10px 5px #222);
+  filter: drop-shadow(10px 10px 10px #222);
+}
+
+#dino-listen{
+  background-color: rgba(255, 255, 255, 0.75);
+  margin: 20px;
+  border-radius: 20px;
+  color: #0085BF;
+}
+
 .dino-box {
   height: 200px;
   min-width: 300px;
@@ -82,13 +104,14 @@ h1 {
   transform: scale(1.05);
 }
 
-.containerTab {
+.containerTab,.dino-record{
   border: 10px solid;
   border-color: #FF9605;
   border-radius: 20px;
   background-color: white;
   margin: 20px;
 }
+
 
 .containerTab h2 {
   margin: 0;
@@ -188,6 +211,7 @@ h1 {
 
 
 #mapid {
+  height: 480px;
   border-radius: 20px;
   margin: 20px;
 }
@@ -284,5 +308,4 @@ h1 {
   background: #E53100;
 }
 
-#mapid { height: 480px; }
 
