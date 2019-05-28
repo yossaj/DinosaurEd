@@ -300,7 +300,7 @@ db.dinosaurs.insertMany([
             "latitude": "38.8261",
             "longitude": "-109.5679"
         },
-        "audio": "http://www.amodinosaur.com/Uploads/file/20150914/1442235739984722.wav"
+        "audio": "http://www.amodinosaur.com/Uploads/file/20150914/1442235710598252.wav"
 	},
 	{
 		"name": "Vulcanodon",
@@ -320,7 +320,7 @@ db.dinosaurs.insertMany([
             "latitude": "-16.8083",
             "longitude": "28.275"
         },
-        "audio": "http://www.wavsource.com/snds_2018-06-03_5106726768923853/people/famous/nimoy_spock.wav"
+        "audio": "http://www.wavsource.com/snds_2018-06-03_5106726768923853/tv/star_trek/2-26_live_long1.wav"
         
 	},
 	{
