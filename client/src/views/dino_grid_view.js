@@ -40,11 +40,15 @@ DinoGrid.prototype.changeVisiblity = function (onOrOff) {
     document.querySelector('main#main').style.display = "none";
     document.querySelector('div#detail-view').style.display = "none";
     document.querySelector('div#mapid').style.display = "none";
+
+    document.querySelector('div#quiz-div').style.display = "block";
   }
   else {
     document.querySelector('main#main').style.display = "block";
     document.querySelector('div#detail-view').style.display = "block";
     document.querySelector('div#mapid').style.display = "block";
+
+    document.querySelector('div#quiz-div').style.display = "none";  
   }
 }
 

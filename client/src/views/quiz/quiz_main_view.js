@@ -12,6 +12,16 @@ QuizMainView.prototype.bindEvents = function () {
   })
 }
 
+QuizQuestionView.prototype.randomDinosaur = function () {
+  const randomDinosaur = this.dinosaurs[Math.floor(Math.random()*this.dinosaurs.length)];
+  return randomDinosaur
+}
+
+QuizMainView.prototype.fourUniqueDinosaurs = function () {
+  
+}
+
+
 QuizMainView.prototype.renderQuiz = function () {
   var i
   for (i = 0; i < 4; i++) {

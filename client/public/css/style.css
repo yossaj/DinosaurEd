@@ -190,12 +190,14 @@ h1 {
 
 
 #quiz-div {
+  display: none;
   border: 10px solid;
   border-color: #97D800;
   border-radius: 20px;
   margin: 20px;
   padding-top: 10px;
   background-color: white;
+  color: gray;
 }
 
 #mapid {

@@ -1,7 +1,7 @@
 const PubSub = require('../../helpers/pub_sub.js')
 
-const QuizQuestionView = function (dinosaurs, quizContainer) {
-  this.dinosaurs = dinosaurs
+const QuizQuestionView = function (fourUniqueDinosaurs, quizContainer) {
+  this.fourUniqueDinosaurs = fourUniqueDinosaurs
   this.quizContainer = quizContainer
   this.dietList = []
 }
@@ -10,11 +10,6 @@ QuizQuestionView.prototype.bindEvents = function() {
   PubSub.subscribe('Dinosaurs:diet-types-ready', (event)=>{
     this.dietList = event.target.detail
   })
-}
-
-QuizQuestionView.prototype.randomDinosaur = function () {
-  const randomDinosaur = this.dinosaurs[Math.floor(Math.random()*this.dinosaurs.length)];
-  return randomDinosaur
 }
 
 
