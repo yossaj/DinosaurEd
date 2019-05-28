@@ -16,8 +16,8 @@ DinoGrid.prototype.bindEvents = function(){
 
     })
 
-    PubSub.subscribe('QuizButtonView:click', (event)=>{
-      this.changeVisiblity();
+    PubSub.subscribe('SortToggle:change', (event)=>{
+      this.changeVisiblity(event.detail);
     })
 
 }
@@ -35,10 +35,17 @@ DinoGrid.prototype.clearList = function () {
   this.gridContainer.innerHTML = '';
 };
 
-DinoGrid.prototype.changeVisiblity = function () {
-  document.querySelector('main#main').style.display = "none";
-  document.querySelector('div#detail-view').style.display = "none";
-  document.querySelector('div#mapid').style.display = "none";
+DinoGrid.prototype.changeVisiblity = function (onOrOff) {
+  if (onOrOff === 'on') {
+    document.querySelector('main#main').style.display = "none";
+    document.querySelector('div#detail-view').style.display = "none";
+    document.querySelector('div#mapid').style.display = "none";
+  }
+  else {
+    document.querySelector('main#main').style.display = "block";
+    document.querySelector('div#detail-view').style.display = "block";
+    document.querySelector('div#mapid').style.display = "block";
+  }
 }
 
 
