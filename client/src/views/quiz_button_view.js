@@ -6,7 +6,11 @@ const QuizButtonView = function (container) {
 
 
 QuizButtonView.prototype.bindEvents = function () {
-
+  console.log(this.container)
+  this.container.addEventListener('click', (event) => {
+   PubSub.publish('QuizButtonView:click', (event.target.value))
+   console.log(event.target.value)
+  })
 };
 
 

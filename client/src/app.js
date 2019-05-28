@@ -18,8 +18,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const dinoGrid = new DinoGrid(gridContainer, detailContainer);
     dinoGrid.bindEvents();
 
-    // const dinoGridList = new dinoGridList();
-    // dinoGridList.bindEvents();
+    const quizButton = document.querySelector('button#quiz')
+    const quizButtonView = new QuizButtonView(quizButton);
+    quizButtonView.bindEvents();
 
     const url = 'http://localhost:3000/api/dinosaurs'
     const dinosaur = new Dinosaurs(url);
