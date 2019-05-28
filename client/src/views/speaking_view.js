@@ -1,9 +1,7 @@
 
-const SpeakingDino = function(div, recordBut){
+const SpeakingDino = function(div){
     this.div = div
-    this.recordBut = recordBut
     this.images = []
-   
 }
 
 SpeakingDino.prototype.bindEvents = function(){
@@ -96,32 +94,19 @@ const playAudio = () => {
 //             resolve({ start, stop });
 //     });
 
+//        this.openClose(this.div, this.images)
+//     })
 
 
-// SpeakingDino.prototype.recordStop = async () => {
-//          let recorder = null;
-//          let audio = null;
-//         // console.log("this is recorder", recorder)
-//         if (recorder) {
-//             audio = await recorder.stop();
-//             recorder = null;
-//             document.querySelector("#record-stop-button").textContent = "Record";
-//             document.querySelector("#dinop").removeAttribute("disabled");
-//         } else {
-//             recorder = await recordAudio();
-//             recorder.start();
-//             document.querySelector("#record-stop-button").textContent = "Stop";
-//         }
-//     };
+// }
 
-SpeakingDino.prototype.openClose = function(div, images){
-    if (div.src === "http://localhost:3000/images/dino01.png") {
-        div.src = images[1]
-        playAudio()
-    } else if (div.src === "http://localhost:3000/images/dino02.png"){
-        div.src =images[0]
-    }
-}
+// SpeakingDino.prototype.openClose = function(div, images){
+//     if (div.src === "http://localhost:3000/images/dino01.png") {
+//         div.src = images[1]
+//     } else if (div.src === "http://localhost:3000/images/dino02.png"){
+//         div.src =images[0]
+//     }
+// }
 
 SpeakingDino.prototype.populateImages = function(images){
     images[0] = "/images/dino01.png";

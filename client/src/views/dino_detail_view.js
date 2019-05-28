@@ -7,6 +7,7 @@ const DinoDetailView = function (dinosaurs, detailContainer) {
   this.container = detailContainer
 }
 
+
 DinoDetailView.prototype.render = function(){
     this.container.innerHTML = ""
     for(const dinosaur of this.dinosaurs){
@@ -129,6 +130,7 @@ DinoDetailView.prototype.render = function(){
         this.container.appendChild(detailContainer);
       }
 }
+
 
 
 

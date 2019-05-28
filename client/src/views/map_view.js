@@ -16,7 +16,7 @@ Map.prototype.render = function(){
             ' <a href="https://www.mapbox.com/"></a>',
         id: 'mapbox.streets'
     }).addTo(this.mymap);
-    
+
 }
 
 Map.prototype.setPosition = function (long,lat) {

@@ -4,22 +4,18 @@ const PubSub = require('../helpers/pub_sub.js');
 const Dinosaurs = function(url) {
     this.url = url
     this.dinoData = [];
+    this.diets =[];
 }
 Dinosaurs.prototype.bindEvents = function() {
     PubSub.subscribe('SelectView:Dinosaurs-diet-change', event => {
         const dietIndex = event.detail
-        console.log(event.detail)
         if (dietIndex === 'none') {
-          const request = new RequestHelper(this.url);
-          request.get()
-          .then((dinosaurs) => {
-              this.dinoData = dinosaurs
-              PubSub.publish('Dinosaurs:data-ready', dinosaurs)
-          })
-          .catch(console.error);
+          PubSub.publish('Dinosaurs:data-ready', this.dinoData)
         }
-        this.publishDinosaursByDiet(dietIndex);
-      })
+        else {
+          this.publishDinosaursByDiet(dietIndex);
+        };
+    });
 };
 
 Dinosaurs.prototype.getData = function() {
