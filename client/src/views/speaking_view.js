@@ -1,5 +1,6 @@
 
-const SpeakingDino = function(div){
+const SpeakingDino = function(div, recButton){
+    this.recButton = recButton
     this.div = div
     this.images = []
 }
@@ -7,7 +8,7 @@ const SpeakingDino = function(div){
 SpeakingDino.prototype.bindEvents = function(){
     this.populateImages(this.images)
 
-    this.recordBut.addEventListener('click', (evt)=>{
+    this.recButton.addEventListener('click', (evt)=>{
         // console.log('beeebeee')
         recordStop()
     })
