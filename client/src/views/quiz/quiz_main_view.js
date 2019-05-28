@@ -21,18 +21,18 @@ QuizMainView.prototype.fourUniqueDinosaurs = function () {
   fourUniqueDinosaurs = [];
     while(fourUniqueDinosaurs.length < 4) {
     const dinosaur = this.randomDinosaur()
-    if (fourUniqueDinosaurs.include(dinosaur) === false) {
+    if (fourUniqueDinosaurs.includes(dinosaur) === false) {
     fourUniqueDinosaurs.push(dinosaur)
     }
   }
-  return fourUniqueDinosaurs
   console.log(fourUniqueDinosaurs);
+  return fourUniqueDinosaurs
 }
 
 
 QuizMainView.prototype.renderQuiz = function () {
-  var i
-  for (i = 0; i < 4; i++) {
+  const fourUniqueDinosaurs = this.fourUniqueDinosaurs();
+  for (const dinosaur of this.dinosaurs)
   const question = new QuizQuestionView(this.dinosaurs, this.quizContainer);
   const questionElement = question.renderQuestion();
   this.quizContainer.appendChild(questionElement)
