@@ -3,6 +3,7 @@ const DinoGrid = require('./views/dino_grid_view.js')
 // const DinoGridList = require('./views/dino_grid_item_view.js')
 const DinoDetailView = require('./views/dino_detail_view.js')
 const Dinosaurs = require('./models/dinosaurs.js')
+const SpeakingDino = require('./views/speaking_view.js')
 
 
 document.addEventListener('DOMContentLoaded', ()=>{
@@ -17,6 +18,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const detailContainer = document.querySelector('div#detail-view')
     const dinoGrid = new DinoGrid(gridContainer, detailContainer);
     dinoGrid.bindEvents();
+
+    const speaking_img = document.querySelector('#dinop')
+    const speakingDino = new SpeakingDino(speaking_img)
+    speakingDino.bindEvents()
 
     // const dinoGridList = new dinoGridList();
     // dinoGridList.bindEvents();
