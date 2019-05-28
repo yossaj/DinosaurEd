@@ -29,8 +29,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const mainQuiz = new QuizMainView(quizContainer);
     mainQuiz.bindEvents();
 
+    const record_butt = document.querySelector('#record-stop-button')
     const speaking_img = document.querySelector('#dinop')
-    const speakingDino = new SpeakingDino(speaking_img)
+    const speakingDino = new SpeakingDino(speaking_img, record_butt)
     speakingDino.bindEvents()
 
     const url = 'http://localhost:3000/api/dinosaurs'

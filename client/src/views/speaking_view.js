@@ -6,14 +6,14 @@ const SpeakingDino = function(div){
 
 SpeakingDino.prototype.bindEvents = function(){
     this.populateImages(this.images)
-   
+
 
     this.div.addEventListener('click', (evt) => {
-        
+
        this.openClose(this.div, this.images)
     })
-   
-    
+
+
 }
 
 SpeakingDino.prototype.openClose = function(div, images){
@@ -39,23 +39,23 @@ SpeakingDino.prototype.populateImages = function(images){
 }
 
 // SpeakingDino.prototype.displayNextImage = function(div, images) {
-    // console.log(div, images)
-    // function displayNextImage() {
-    //     if (stop.id == "dinop") {
-    //         // x = (x === images.length - 1) ? 0 : x + 1;
-    //         document.getElementById("dinop").src = images[x];
-    //     }
-    // }
-
-    // setInterval(displayNextImage, 2000);
-        
+//     console.log(div, images)
+//     function displayNextImage() {
+//         if (stop.id == "dinop") {
+//             // x = (x === images.length - 1) ? 0 : x + 1;
+//             document.getElementById("dinop").src = images[x];
+//         }
+//     }
+//
+//     setInterval(displayNextImage, 2000);
+//
 //  }
-
-
+//
+//
 // SpeakingDino.prototype.startTimer =function(div,images) {
-    
-    
-    // setTimeout(this.closeMouth, 4000)
+//
+//
+//     setTimeout(this.closeMouth, 4000)
 // }
 
 // const dinopic = document.querySelector('#dinop')

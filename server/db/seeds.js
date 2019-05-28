@@ -320,7 +320,7 @@ db.dinosaurs.insertMany([
             "latitude": "-16.8083",
             "longitude": "28.275"
         },
-        "audio": "http://www.wavsource.com/snds_2018-06-03_5106726768923853/tv/star_trek/2-26_live_long1.wav"
+        "audio": "http://www.rosswalker.co.uk/tv_sounds/sounds_files_20150201_8133092/star_trek/live_long3.wav"
         
 	},
 	{
