@@ -4,12 +4,6 @@ const Map = function(mymap){
     this.mymap = mymap
 }
 
-Map.prototype.bindingEvents = function () {
-  PubSub.subscribe('QuizButtonView:click', (event)=>{
-    this.changeVisiblity();
-  })
-}
-
 
 
 Map.prototype.render = function(){

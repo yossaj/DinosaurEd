@@ -1,15 +1,9 @@
 const PubSub = require('../../helpers/pub_sub.js')
 
-const QuizQuestionView = function (fourUniqueDinosaurs, quizContainer) {
-  this.fourUniqueDinosaurs = fourUniqueDinosaurs
+const QuizQuestionView = function (uniqueDinosaur, quizContainer, diets) {
+  this.uniqueDinosaur = uniqueDinosaur
   this.quizContainer = quizContainer
-  this.dietList = []
-}
-
-QuizQuestionView.prototype.bindEvents = function() {
-  PubSub.subscribe('Dinosaurs:diet-types-ready', (event)=>{
-    this.dietList = event.target.detail
-  })
+  this.dietList = diets
 }
 
 
@@ -23,18 +17,19 @@ QuizQuestionView.prototype.renderQuestion = function() {
   question.appendChild(questionForm)
 
   const questionStatement = document.createElement('p')
-  questionStatement.textContent = `What is the diet of the ??`
+  questionStatement.textContent = `What is the diet of the ${this.uniqueDinosaur.name}?`
   questionForm.appendChild(questionStatement);
 
-  for(const diet of this.dietList){
+  for (const dietType of this.dietList) {
+
 
     const radioChoiceLabel = document.createElement('label')
-    radioChoiceLabel.textContent = diet
+    radioChoiceLabel.textContent = dietType
 
     const radioChoice = document.createElement('input');
     radioChoice.setAttribute('type', 'radio');
-    radioChoice.setAttribute('name', diet);
-    radioChoice.setAttribute('value', diet);
+    radioChoice.setAttribute('name', dietType);
+    radioChoice.setAttribute('value', dietType);
     radioChoiceLabel.appendChild(radioChoice);
 
     questionForm.appendChild(radioChoiceLabel);

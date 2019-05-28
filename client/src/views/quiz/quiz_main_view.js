@@ -8,8 +8,12 @@ const QuizMainView = function (quizContainer) {
 QuizMainView.prototype.bindEvents = function () {
   PubSub.subscribe('Dinosaurs:data-ready', (event)=>{
       this.dinosaurs = event.detail;
-      this.renderQuiz();
   })
+
+  PubSub.subscribe('Dinosaurs:diet-types-ready', (event)=>{
+     this.dietList = event.detail
+     this.renderQuiz();
+   })
 }
 
 QuizMainView.prototype.randomDinosaur = function () {
@@ -25,17 +29,17 @@ QuizMainView.prototype.fourUniqueDinosaurs = function () {
     fourUniqueDinosaurs.push(dinosaur)
     }
   }
-  console.log(fourUniqueDinosaurs);
   return fourUniqueDinosaurs
 }
 
 
+
 QuizMainView.prototype.renderQuiz = function () {
   const fourUniqueDinosaurs = this.fourUniqueDinosaurs();
-  for (const dinosaur of this.dinosaurs)
-  const question = new QuizQuestionView(this.dinosaurs, this.quizContainer);
-  const questionElement = question.renderQuestion();
-  this.quizContainer.appendChild(questionElement)
+  for (const dinosaur of fourUniqueDinosaurs) {
+    const question = new QuizQuestionView(dinosaur, this.quizContainer, this.dietList);
+    const questionElement = question.renderQuestion();
+    this.quizContainer.appendChild(questionElement)
   }
 
 }
