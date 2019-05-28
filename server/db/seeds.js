@@ -20,7 +20,8 @@ db.dinosaurs.insertMany([
             "latitude": "41.9014",
             "longitude": "-106.0792"
         },
-        "audio": "http://www.amodinosaur.com/Uploads/file/20150914/1442235788535951.wav"
+        "audio": "http://www.amodinosaur.com/Uploads/file/20150914/1442235788535951.wav",
+        "visit": "http://www.uwyo.edu/geomuseum/exhibits/allosaurus.html"
 	},
 	{
 		"name": "Apatosaurus",
@@ -100,7 +101,9 @@ db.dinosaurs.insertMany([
             "latitude": "50.7413",
             "longitude": "-111.5759"
         },
-        "audio": "http://www.moviesoundclips.net/movies1/jurassicpark/pile.mp3"
+        "audio": "http://www.moviesoundclips.net/movies1/jurassicpark/pile.mp3",
+        "visit": "https://www.childrensmuseum.org/blog/meet-dracorex-hogwartsia-v2"
+        
 	},
 	{
 		"name": "Elasmosaurus",
@@ -240,7 +243,8 @@ db.dinosaurs.insertMany([
             "latitude": "50.7501",
             "longitude": "-111.4886"
         },
-        "audio": "http://www.ringelkater.de/Sounds/2geraeusche_tiere/dino_parasaurolophus.wav"
+        "audio": "http://www.ringelkater.de/Sounds/2geraeusche_tiere/dino_parasaurolophus.wav",
+        "visit": "http://www.fieldmuseum.org/blog/meet-sues-new-neighbors-hall-dinosaurs"
 	},
 	{
 		"name": "Spinosaurus",
@@ -280,7 +284,8 @@ db.dinosaurs.insertMany([
             "latitude": "46.3819",
             "longitude": "-103.9644"
         },
-        "audio": "http://www.moviesoundclips.net/movies1/jurassicpark/trex.mp3"
+        "audio": "http://www.moviesoundclips.net/movies1/jurassicpark/trex.mp3",
+        "visit": "https://www.nms.ac.uk/explore-our-collections/stories/natural-world/tyrannosaurus-rex/"
 	},
 	{
 		"name": "Utahraptor",
@@ -300,7 +305,8 @@ db.dinosaurs.insertMany([
             "latitude": "38.8261",
             "longitude": "-109.5679"
         },
-        "audio": "http://www.amodinosaur.com/Uploads/file/20150914/1442235710598252.wav"
+        "audio": "http://www.amodinosaur.com/Uploads/file/20150914/1442235710598252.wav",
+        "visit": "https://usueastern.edu/museum/exhibits/utahraptor"
 	},
 	{
 		"name": "Vulcanodon",
