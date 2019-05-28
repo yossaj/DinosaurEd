@@ -10,13 +10,12 @@ Dinosaurs.prototype.bindEvents = function() {
     PubSub.subscribe('SelectView:Dinosaurs-diet-change', event => {
         const dietIndex = event.detail
         if (dietIndex === 'none') {
-          console.log(this.dinoData)
           PubSub.publish('Dinosaurs:data-ready', this.dinoData)
         }
         else {
-        this.publishDinosaursByDiet(dietIndex);
-      }
-      })
+          this.publishDinosaursByDiet(dietIndex);
+        };
+    });
 };
 
 Dinosaurs.prototype.getData = function() {
