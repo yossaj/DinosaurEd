@@ -1,22 +1,24 @@
 const PubSub = require('../../helpers/pub_sub.js')
 const QuizQuestionView = require('./quiz_question_view.js')
 
-const QuizMainView = function (dinosaurs, quizContainer) {
-  this.dinosaurs = dinosaurs
+const QuizMainView = function (quizContainer) {
   this.quizContainer = quizContainer
-
+  this.dinosaurs = dinosaurs
 }
 
+QuizMainView.prototype.bindEvents = function () {
+  PubSub.subscribe('Dinosaurs:data-ready', (event)=>{
+      this.dinosaurs = event.detail;
+  })
+}
 
-
-
-
-
-// prototype function () {
-  // loop 4 times
-  // for each dinosaur
-  // render function on QuizQuestionView(dinosaur, this.quizContainer)
-// }
+QuizMainView.prototype.renderQuiz = function () {
+  var i
+  for (i = 0; i < 4; i++) {
+  const question = new QuizQuestionView(this.dinosaurs, this.quizContainer);
+  question.renderQuestion();
+  }
+}
 
 
 

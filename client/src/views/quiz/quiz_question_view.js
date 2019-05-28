@@ -3,36 +3,43 @@ const PubSub = require('../../helpers/pub_sub.js')
 const QuizQuestionView = function (dinosaur, quizContainer) {
   this.dinosaur = dinosaur
   this.quizContainer = quizContainer
+  this.dietList = []
+}
 
+QuizQuestionView.prototype.bindEvents = function() {
+  PubSub.subscribe('Dinosaurs:diet-types-ready', (event)=>{
+    this.dietList = event.target.detail
+  })
 }
 
 
-QuizQuestionView.prototype.renderQuestion (category) {
+QuizQuestionView.prototype.renderQuestion = function() {
 
   const question = document.createElement('div')
   question.classList.add('question')
-
-  const questionForm = document.createElement('form')
-  questionForm.classList.add('question-form')
-  question.appendChild(questionForm)
 
   const questionStatement = document.createElement('p')
   questionStatement.textContent = `What is the diet of ${dinosaur.name}?`
   questionForm.appendChild(questionStatement);
 
-  const radioChoice1 = document.createElement('input');
-  radioChoice1.setAttribute('type', 'radio');
-  radioChoice1.setAttribute('name', 'choice-1');
+  const questionForm = document.createElement('form')
+  questionForm.classList.add('question-form')
+  question.appendChild(questionForm)
 
+  for(const diet of this.dietList){
 
-  const radioChoice2 = document.createElement('input');
-  radioChoice2.setAttribute('type', 'radio');
-  radioChoice2.setAttribute('name', 'choice-2');
+    const radioChoiceLabel = document.createElement('label')
+    radioChoiceLabel.textContent = diet
 
-  const radioChoice3 = document.createElement('input');
-  radioChoice3.setAttribute('type', 'radio');
-  radioChoice3.setAttribute('name', 'choice-3');
+    const radioChoice = document.createElement('input');
+    radioChoice.setAttribute('type', 'radio');
+    radioChoice.setAttribute('name', diet);
+    radioChoice.setAttribute('value', diet);
+    radioChoiceLabel.appendChild(radioChoice);
 
+    questionForm.appendChild(radioChoiceLabel);
+  }
+}
 
 
 
@@ -40,4 +47,4 @@ QuizQuestionView.prototype.renderQuestion (category) {
 // }
 
 
-module.exports = QuizButtonView;
+module.exports = QuizQuestionView;
