@@ -3,7 +3,11 @@ const DinoGrid = require('./views/dino_grid_view.js')
 const QuizButtonView = require('./views/quiz/quiz_button_view.js')
 const DinoDetailView = require('./views/dino_detail_view.js')
 const Dinosaurs = require('./models/dinosaurs.js')
+<<<<<<< HEAD
 const QuizMainView = require('./views/quiz/quiz_main_view.js')
+=======
+const SpeakingDino = require('./views/speaking_view.js')
+>>>>>>> develop
 
 
 document.addEventListener('DOMContentLoaded', ()=>{
@@ -19,6 +23,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const dinoGrid = new DinoGrid(gridContainer, detailContainer);
     dinoGrid.bindEvents();
 
+<<<<<<< HEAD
     // const quizButton = document.querySelector('button#quiz')
     // const quizButtonView = new QuizButtonView(quizButton);
     // quizButtonView.bindEvents();
@@ -27,6 +32,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
     // const mainQuiz = new QuizMainView(quizContainer);
     // mainQuiz.bindEvents();
     // mainQuiz.renderQuiz();
+=======
+    const speaking_img = document.querySelector('#dinop')
+    const speakingDino = new SpeakingDino(speaking_img)
+    speakingDino.bindEvents()
+
+    // const dinoGridList = new dinoGridList();
+    // dinoGridList.bindEvents();
+>>>>>>> develop
 
     const url = 'http://localhost:3000/api/dinosaurs'
     const dinosaur = new Dinosaurs(url);
