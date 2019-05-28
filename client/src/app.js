@@ -1,6 +1,6 @@
 const DinoSelect = require('./views/dino_select_view.js')
 const DinoGrid = require('./views/dino_grid_view.js')
-const QuizButtonView = require('./views/quiz_button_view.js')
+const QuizButtonView = require('./views/quiz/quiz_button_view.js')
 const DinoDetailView = require('./views/dino_detail_view.js')
 const Dinosaurs = require('./models/dinosaurs.js')
 

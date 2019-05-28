@@ -16,6 +16,11 @@ DinoGrid.prototype.bindEvents = function(){
         this.render(this.dinosaurs, this.gridContainer, this.detailContainer)
 
     })
+
+    PubSub.subscribe('QuizButtonView:click', (event)=>{
+      this.changeVisiblity();
+    })
+
 }
 
 DinoGrid.prototype.render = function(dinosaurs, gridContainer, detailContainer) {
@@ -30,6 +35,10 @@ DinoGrid.prototype.render = function(dinosaurs, gridContainer, detailContainer) 
 DinoGrid.prototype.clearList = function () {
   this.gridContainer.innerHTML = '';
 };
+
+// DinoGrid.prototype.changeVisiblity = function () {
+//   if (this.gridContainer)
+// }
 
 
 module.exports = DinoGrid;
