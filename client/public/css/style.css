@@ -82,12 +82,29 @@ h1 {
   transform: scale(1.05);
 }
 
-.containerTab {
+.containerTab,.dino-record{
   border: 10px solid;
   border-color: #FF9605;
   border-radius: 20px;
   background-color: white;
   margin: 20px;
+}
+.dino-record{
+ display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-content: center;
+  grid-gap: 0;
+  padding: 0;
+
+  background-image: url("../images/junglebg.jpeg");
+  background-repeat: no-repeat;
+  /* background-size: contain; */
+  background-size: 100% 100%;
+  /* background-size:contain; */
+  /* background-size: auto; */
+}
+
+.dino-record img{
 }
 
 .containerTab h2 {
@@ -188,6 +205,7 @@ h1 {
 
 
 #mapid {
+  height: 480px;
   border-radius: 20px;
   margin: 20px;
 }
@@ -284,5 +302,4 @@ h1 {
   background: #E53100;
 }
 
-#mapid { height: 480px; }
 
