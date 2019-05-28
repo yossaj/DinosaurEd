@@ -1,5 +1,6 @@
 const PubSub = require('../helpers/pub_sub.js')
 const Map = require('./map_view.js')
+const map = new Map()
 
 const DinoGridItem = function (dinosaurs, container) {
     this.dinosaurs = dinosaurs
@@ -9,7 +10,7 @@ const DinoGridItem = function (dinosaurs, container) {
 DinoGridItem.prototype.render = function(){
     this.container.innerHTML = ""
 
-    const map = new Map()
+
 
 
     for(const dinosaur of this.dinosaurs){

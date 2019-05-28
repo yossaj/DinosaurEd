@@ -234,6 +234,11 @@ input#quiz {
   color: gray;
 }
 
+.radio-choice-div {
+  display: flex;
+  flex-direction: column;
+}
+
 #mapid {
   height: 480px;
   border-radius: 20px;

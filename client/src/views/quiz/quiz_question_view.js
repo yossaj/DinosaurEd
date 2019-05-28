@@ -20,19 +20,22 @@ QuizQuestionView.prototype.renderQuestion = function() {
   questionStatement.textContent = `What is the diet of the ${this.uniqueDinosaur.name}?`
   questionForm.appendChild(questionStatement);
 
-  for (const dietType of this.dietList) {
+  const radioChoiceDiv = document.createElement('div')
+  radioChoiceDiv.classList.add('radio-choice-div')
+  questionForm.appendChild(radioChoiceDiv)
 
+  for (const dietType of this.dietList) {
 
     const radioChoiceLabel = document.createElement('label')
     radioChoiceLabel.textContent = dietType
 
     const radioChoice = document.createElement('input');
     radioChoice.setAttribute('type', 'radio');
-    radioChoice.setAttribute('name', dietType);
+    radioChoice.setAttribute('name', `${this.uniqueDinosaur.name}-diet`);
     radioChoice.setAttribute('value', dietType);
     radioChoiceLabel.appendChild(radioChoice);
 
-    questionForm.appendChild(radioChoiceLabel);
+    radioChoiceDiv.appendChild(radioChoiceLabel);
   }
 
   return question
