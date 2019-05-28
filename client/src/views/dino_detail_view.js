@@ -15,7 +15,7 @@ DinoDetailView.prototype.render = function(){
 
         detailContainer.id = (dinosaur._id);
 
-        detailContainer.classList.add('containerTab');
+        detailContainer.classList.add('detail-container');
         detailContainer.setAttribute("style", "display: none;");
 
         const headerDiv = document.createElement('div');
@@ -46,7 +46,6 @@ DinoDetailView.prototype.render = function(){
         const image = document.createElement('img')
         image.src = dinosaur.images.dinoImage
         infoStats.appendChild(image);
-
 
         const info = document.createElement('div');
         info.classList.add('info')

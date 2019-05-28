@@ -1,6 +1,6 @@
 const Dinosaurs = require('./models/dinosaurs.js')
 const DinoSelect = require('./views/dino_select_view.js')
-const DinoGrid = require('./views/dino_grid_view.js')
+const DinoGridView = require('./views/dino_grid_view.js')
 const QuizToggleView = require('./views/quiz/quiz_toggle_view.js')
 const DinoDetailView = require('./views/dino_detail_view.js')
 const QuizMainView = require('./views/quiz/quiz_main_view.js')
@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     const gridContainer = document.querySelector('div#grid-view')
     const detailContainer = document.querySelector('div#detail-view')
-    const dinoGrid = new DinoGrid(gridContainer, detailContainer);
-    dinoGrid.bindEvents();
+    const dinoGridView = new DinoGridView(gridContainer, detailContainer);
+    dinoGridView.bindEvents();
 
     const quizToggle = document.querySelector('input#quiz')
     const quizToggleView = new QuizToggleView(quizToggle);

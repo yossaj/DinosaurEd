@@ -2,12 +2,12 @@ const PubSub = require('../helpers/pub_sub.js')
 const DinoGridItem = require('./dino_grid_item_view.js')
 const DinoDetailView = require('./dino_detail_view.js')
 
-const DinoGrid = function(gridContainer, detailContainer){
+const DinoGridView = function(gridContainer, detailContainer){
     this.gridContainer = gridContainer;
     this.detailContainer = detailContainer;
 }
 
-DinoGrid.prototype.bindEvents = function(){
+DinoGridView.prototype.bindEvents = function(){
 
     PubSub.subscribe('Dinosaurs:data-ready', (event)=>{
         this.clearList();
@@ -22,7 +22,7 @@ DinoGrid.prototype.bindEvents = function(){
 
 }
 
-DinoGrid.prototype.render = function(dinosaurs, gridContainer, detailContainer) {
+DinoGridView.prototype.render = function(dinosaurs, gridContainer, detailContainer) {
 
     const dinoGridItem = new DinoGridItem(dinosaurs, gridContainer);
     dinoGridItem.render()
@@ -31,11 +31,11 @@ DinoGrid.prototype.render = function(dinosaurs, gridContainer, detailContainer) 
     dinoDetailView.render()
 }
 
-DinoGrid.prototype.clearList = function () {
+DinoGridView.prototype.clearList = function () {
   this.gridContainer.innerHTML = '';
 };
 
-DinoGrid.prototype.changeVisiblity = function (onOrOff) {
+DinoGridView.prototype.changeVisiblity = function (onOrOff) {
   if (onOrOff === 'on') {
     document.querySelector('main#main').style.display = "none";
     document.querySelector('div#detail-view').style.display = "none";
@@ -48,9 +48,9 @@ DinoGrid.prototype.changeVisiblity = function (onOrOff) {
     document.querySelector('div#detail-view').style.display = "block";
     document.querySelector('div#mapid').style.display = "block";
 
-    document.querySelector('div#quiz-div').style.display = "none";  
+    document.querySelector('div#quiz-div').style.display = "none";
   }
 }
 
 
-module.exports = DinoGrid;
+module.exports = DinoGridView;
