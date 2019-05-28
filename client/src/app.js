@@ -3,16 +3,13 @@ const DinoGrid = require('./views/dino_grid_view.js')
 const QuizButtonView = require('./views/quiz/quiz_button_view.js')
 const DinoDetailView = require('./views/dino_detail_view.js')
 const Dinosaurs = require('./models/dinosaurs.js')
-<<<<<<< HEAD
 const QuizMainView = require('./views/quiz/quiz_main_view.js')
-=======
 const SpeakingDino = require('./views/speaking_view.js')
->>>>>>> develop
+
 
 
 document.addEventListener('DOMContentLoaded', ()=>{
     console.log('javascript loaded');
-
 
     const dinoContainer = document.querySelector('select#diet')
     const dinoSelect = new DinoSelect(dinoContainer)
@@ -23,23 +20,17 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const dinoGrid = new DinoGrid(gridContainer, detailContainer);
     dinoGrid.bindEvents();
 
-<<<<<<< HEAD
-    // const quizButton = document.querySelector('button#quiz')
-    // const quizButtonView = new QuizButtonView(quizButton);
-    // quizButtonView.bindEvents();
+    const quizButton = document.querySelector('button#quiz')
+    const quizButtonView = new QuizButtonView(quizButton);
+    quizButtonView.bindEvents();
 
-    // const quizContainer = document.querySelector('div#quiz');
-    // const mainQuiz = new QuizMainView(quizContainer);
-    // mainQuiz.bindEvents();
-    // mainQuiz.renderQuiz();
-=======
+    const quizContainer = document.querySelector('div#quiz');
+    const mainQuiz = new QuizMainView(quizContainer);
+    mainQuiz.bindEvents();
+
     const speaking_img = document.querySelector('#dinop')
     const speakingDino = new SpeakingDino(speaking_img)
     speakingDino.bindEvents()
-
-    // const dinoGridList = new dinoGridList();
-    // dinoGridList.bindEvents();
->>>>>>> develop
 
     const url = 'http://localhost:3000/api/dinosaurs'
     const dinosaur = new Dinosaurs(url);

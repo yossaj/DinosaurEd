@@ -4,9 +4,6 @@ const Map = require('./map_view.js')
 const DinoGridItem = function (dinosaurs, container) {
     this.dinosaurs = dinosaurs
     this.container = container
-    // console.log(container)
-
-
 }
 
 DinoGridItem.prototype.render = function(){
@@ -28,7 +25,7 @@ DinoGridItem.prototype.render = function(){
             x[i].style.display = "none";
           }
           document.getElementById(dinosaur._id).style.display = "block";
-          
+
           console.log("can you hear me",dinosaur.audio)
           const roar = new Audio(dinosaur.audio);
           roar.play();

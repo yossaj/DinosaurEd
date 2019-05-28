@@ -5,7 +5,6 @@ const DinoDetailView = require('./dino_detail_view.js')
 const DinoGrid = function(gridContainer, detailContainer){
     this.gridContainer = gridContainer;
     this.detailContainer = detailContainer;
-
 }
 
 DinoGrid.prototype.bindEvents = function(){
@@ -36,9 +35,11 @@ DinoGrid.prototype.clearList = function () {
   this.gridContainer.innerHTML = '';
 };
 
-// DinoGrid.prototype.changeVisiblity = function () {
-//   if (this.gridContainer)
-// }
+DinoGrid.prototype.changeVisiblity = function () {
+  document.querySelector('main#main').style.display = "none";
+  document.querySelector('div#detail-view').style.display = "none";
+  document.querySelector('div#mapid').style.display = "none";
+}
 
 
 module.exports = DinoGrid;

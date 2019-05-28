@@ -4,6 +4,12 @@ const Map = function(mymap){
     this.mymap = mymap
 }
 
+Map.prototype.bindingEvents = function () {
+  PubSub.subscribe('QuizButtonView:click', (event)=>{
+    this.changeVisiblity();
+  })
+}
+
 
 
 Map.prototype.render = function(){
@@ -16,7 +22,7 @@ Map.prototype.render = function(){
             ' <a href="https://www.mapbox.com/"></a>',
         id: 'mapbox.streets'
     }).addTo(this.mymap);
-    
+
 }
 
 Map.prototype.setPosition = function (long,lat) {

@@ -3,7 +3,6 @@ const QuizQuestionView = require('./quiz_question_view.js')
 
 const QuizMainView = function (quizContainer) {
   this.quizContainer = quizContainer
-  this.dinosaurs = dinosaurs
 }
 
 QuizMainView.prototype.bindEvents = function () {
