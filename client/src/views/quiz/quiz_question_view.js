@@ -15,8 +15,6 @@ QuizQuestionView.prototype.bindEvents = function() {
 
 QuizQuestionView.prototype.renderQuestion = function() {
 
-  const randomDinosaur = this.randomDinosaur();
-
   const question = document.createElement('div')
   question.classList.add('question')
 
@@ -25,7 +23,7 @@ QuizQuestionView.prototype.renderQuestion = function() {
   question.appendChild(questionForm)
 
   const questionStatement = document.createElement('p')
-  questionStatement.textContent = `What is the diet of the ${randomDinosaur.name}?`
+  questionStatement.textContent = `What is the diet of the ??`
   questionForm.appendChild(questionStatement);
 
   for(const diet of this.dietList){

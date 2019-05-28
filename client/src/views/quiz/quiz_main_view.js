@@ -12,13 +12,21 @@ QuizMainView.prototype.bindEvents = function () {
   })
 }
 
-QuizQuestionView.prototype.randomDinosaur = function () {
+QuizMainView.prototype.randomDinosaur = function () {
   const randomDinosaur = this.dinosaurs[Math.floor(Math.random()*this.dinosaurs.length)];
   return randomDinosaur
 }
 
 QuizMainView.prototype.fourUniqueDinosaurs = function () {
-  
+  fourUniqueDinosaurs = [];
+    while(fourUniqueDinosaurs.length < 4) {
+    const dinosaur = this.randomDinosaur()
+    if (fourUniqueDinosaurs.include(dinosaur) === false) {
+    fourUniqueDinosaurs.push(dinosaur)
+    }
+  }
+  return fourUniqueDinosaurs
+  console.log(fourUniqueDinosaurs);
 }
 
 
