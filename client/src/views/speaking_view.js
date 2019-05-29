@@ -15,7 +15,6 @@ SpeakingDino.prototype.bindEvents = function(){
 
 }
 
-
 SpeakingDino.prototype.populateImages = function (images) {
     images[0] = "/images/dino01.png";
     images[1] = "/images/dino02.png";
@@ -41,7 +40,6 @@ SpeakingDino.prototype.displayNextImage = function (div, images) {
             document.getElementById("dinop").src = extraImages[x];
         }
     }
-
     const animate = setInterval(displayNextImage1, 100)
     setTimeout(() => { clearInterval(animate);}, 3000);
 }
@@ -80,10 +78,13 @@ const recordStop = async (div, images) => {
     const actionButton = document.getElementById('record-stop-button');
     actionButton.disabled = true;
     recorder.start();
+    document.querySelector("#record-stop-button").textContent = "Recording...";
     await sleep(3000);
     const audio = await recorder.stop();
     audio.play();
+    document.querySelector("#record-stop-button").textContent = "Playing...";
     await sleep(3000);
+    document.querySelector("#record-stop-button").textContent = "Record";
     actionButton.disabled = false;
 };
 
