@@ -37,9 +37,9 @@ DinoGrid.prototype.clearList = function () {
 
 DinoGrid.prototype.changeVisiblity = function (onOrOff) {
   if (onOrOff === 'on') {
-    document.querySelector('main#main').style.display = "none";
-    document.querySelector('div#detail-view').style.display = "none";
-    document.querySelector('div#mapid').style.display = "none";
+    addHiddenClass('main#main')
+    addHiddenClass('div#detail-view')
+    addHiddenClass('div#mapid')
 
     document.querySelector('div#quiz-div').style.display = "block";
   }
@@ -48,8 +48,16 @@ DinoGrid.prototype.changeVisiblity = function (onOrOff) {
     document.querySelector('div#detail-view').style.display = "block";
     document.querySelector('div#mapid').style.display = "block";
 
-    document.querySelector('div#quiz-div').style.display = "none";  
+    document.querySelector('div#quiz-div').style.display = "none";
   }
+}
+
+DinoGrid.prototype.addHiddenClass = function (element) {
+  document.querySelectior(element).classList.add('hidden');
+}
+
+DinoGrid.prototype.addHiddenClass = function (element) {
+  document.querySelectior(element).classList.add('hidden');
 }
 
 

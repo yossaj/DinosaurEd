@@ -3,7 +3,7 @@ const SpeakingDino = function(div, recButton){
     this.recButton = recButton
     this.div = div
     this.images = []
-}
+  }
 
 SpeakingDino.prototype.bindEvents = function(){
     this.populateImages(this.images)
@@ -14,13 +14,13 @@ SpeakingDino.prototype.bindEvents = function(){
     })
 
     this.div.addEventListener('click', (evt) => {
-        //  this.openClose(this.div, this.images)
+         // this.openClose(this.div, this.images)
         this.displayNextImage(this.div, this.images)
         playAudio()
-        
+
     })
-   
-    
+
+
 }
 
 
@@ -72,14 +72,14 @@ const playAudio = () => {
 };
 
 
-// SpeakingDino.prototype.openClose = function(div, images){
-//     if (div.src === "http://localhost:3000/images/dino01.png") {
-//         div.src = images[1]
-//     } else if (div.src === "http://localhost:3000/images/dino02.png"){
-//         div.src =images[0]
-         // playAudio()
-//     }
-// }
+SpeakingDino.prototype.openClose = function(div, images){
+    if (div.src === "http://localhost:3000/images/dino01.png") {
+        div.src = images[1]
+    } else if (div.src === "http://localhost:3000/images/dino02.png"){
+        div.src =images[0]
+         playAudio()
+    }
+}
 
 SpeakingDino.prototype.populateImages = function(images){
     images[0] = "/images/dino01.png";
@@ -106,7 +106,7 @@ SpeakingDino.prototype.displayNextImage = function(div, images) {
                 document.getElementById("dinop").src = extraImages[x];
             }
         }
-    setInterval(displayNextImage1, 100);  
+    setInterval(displayNextImage1, 100);
     playAudio()
  }
 

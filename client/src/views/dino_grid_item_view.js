@@ -32,8 +32,6 @@ DinoGridItem.prototype.render = function(){
           const roar = new Audio(dinosaur.audio);
           roar.play();
 
-
-
           const mapDiv = document.querySelector('#mapid')
 
           if(mapDiv.classList.contains("off")){
@@ -63,15 +61,6 @@ DinoGridItem.prototype.render = function(){
 
 }
 
-DinoGridItem.prototype.openTab = function (tabName) {
-  var i, x;
-  x = document.getElementsByClassName("containerTab");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  document.getElementById(tabName).style.display = "block";
-
-}
 
 
 
