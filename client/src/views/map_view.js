@@ -24,18 +24,17 @@ Map.prototype.setPosition = function (long,lat) {
     this.mymap.setView([lat, long], 5);
 }
 
+Map.prototype.addMarker = function(lat, long, visit, name){
+    console.log(visit);
+    
 
-Map.prototype.addMarker = function(lat, long){
-
-    var dinoIcon = L.icon({
-
+    const dinoIcon = L.icon({
         iconUrl: 'https://image.flaticon.com/icons/svg/1674/1674556.svg',
 
         iconSize: [64, 64], // size of the icon
         iconAnchor: [11, 24], // point of the icon which will correspond to marker's location
         popupAnchor: [-3, -35] // point from which the popup should open relative to the iconAnchor
     });
-
 
     const markerDino = L.marker([lat, long], { icon: dinoIcon }).addTo(this.mymap);
     if(visit !== undefined){

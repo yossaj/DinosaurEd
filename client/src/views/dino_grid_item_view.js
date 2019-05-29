@@ -5,15 +5,15 @@ const map = new Map()
 const DinoGridItem = function (dinosaurs, container) {
     this.dinosaurs = dinosaurs
     this.container = container
-
 }
 
 
 DinoGridItem.prototype.render = function(){
     this.container.innerHTML = ""
 
-    const map = new Map()
-    
+
+
+
     for(const dinosaur of this.dinosaurs){
 
         const listContainer = document.createElement('div')
@@ -27,7 +27,6 @@ DinoGridItem.prototype.render = function(){
             x[i].style.display = "none";
           }
           document.getElementById(dinosaur._id).style.display = "block";
-
 
           console.log("can you hear me",dinosaur.audio)
           const roar = new Audio(dinosaur.audio);
@@ -48,7 +47,6 @@ DinoGridItem.prototype.render = function(){
           let name = dinosaur.name
           // console.log(long,lat);
           map.setPosition(long,lat)
-
           map.addMarker(lat,long, link, name)
         }
 
