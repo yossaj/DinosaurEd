@@ -9,18 +9,41 @@ SpeakingDino.prototype.bindEvents = function(){
     this.populateImages(this.images)
 
     this.recButton.addEventListener('click', (evt)=>{
-        // console.log('beeebeee')
         recordStop()
+        setTimeout(() => { this.displayNextImage(this.div, this.images); }, 3000);
     })
 
-    this.div.addEventListener('click', (evt) => {
-         // this.openClose(this.div, this.images)
-        this.displayNextImage(this.div, this.images)
-        playAudio()
-
-    })
+}
 
 
+SpeakingDino.prototype.populateImages = function (images) {
+    images[0] = "/images/dino01.png";
+    images[1] = "/images/dino02.png";
+    images[2] = "/images/dino03.png";
+    images[3] = "/images/dino03.png";
+    images[4] = "/images/dino03.png";
+    images[5] = "/images/dino03.png";
+    images[6] = "/images/dino03.png";
+    images[7] = "/images/dino02.png";
+    images[8] = "/images/dino03.png";
+    images[9] = "/images/dino02.png";
+    images[10] = "/images/dino01.png";
+}
+
+SpeakingDino.prototype.displayNextImage = function (div, images) {
+    const extraImages = images;
+    const extraDiv = div;
+    let x = -1;
+    function displayNextImage1() {
+        if (extraDiv.id == "dinop") {
+            console.log('sheep')
+            x = (x === extraImages.length - 1) ? 0 : x + 1;
+            document.getElementById("dinop").src = extraImages[x];
+        }
+    }
+
+    const animate = setInterval(displayNextImage1, 100)
+    setTimeout(() => { clearInterval(animate);}, 3000);
 }
 
 
@@ -47,111 +70,21 @@ const recordAudio = () =>
         resolve({ start, stop });
     });
 
-let recorder = null;
-let audio = null;
 
 
-const recordStop = async () => {
-    console.log("this is recorder",recorder)
-    if (recorder) {
-        audio = await recorder.stop();
-        recorder = null;
-        document.querySelector("#record-stop-button").textContent = "Record";
-        document.querySelector("#dinop").removeAttribute("disabled");
-    } else {
-        recorder = await recordAudio();
-        recorder.start();
-        document.querySelector("#record-stop-button").textContent = "Stop";
-    }
+const sleep = time => new Promise(resolve => setTimeout(resolve, time));
+
+const recordStop = async (div, images) => {
+    // console.log("this is recorder",recorder)
+    const recorder = await recordAudio();
+    const actionButton = document.getElementById('record-stop-button');
+    actionButton.disabled = true;
+    recorder.start();
+    await sleep(3000);
+    const audio = await recorder.stop();
+    audio.play();
+    await sleep(3000);
+    actionButton.disabled = false;
 };
-
-const playAudio = () => {
-    if (audio && typeof audio.play === "function") {
-        audio.play();
-    }
-};
-
-// SpeakingDino.prototype.recordAudio = () =>
-
-//         new Promise(async resolve => {
-//             const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-//             const mediaRecorder = new MediaRecorder(stream);
-//             const audioChunks = [];
-//             mediaRecorder.addEventListener("dataavailable", event => {
-//                 audioChunks.push(event.data);
-//             });
-//             const start = () => mediaRecorder.start();
-//             const stop = () =>
-//                 new Promise(resolve => {
-//                     mediaRecorder.addEventListener("stop", () => {
-//                         const audioBlob = new Blob(audioChunks);
-//                         const audioUrl = URL.createObjectURL(audioBlob);
-//                         const audio = new Audio(audioUrl);
-//                         const play = () => audio.play();
-//                         resolve({ audioBlob, audioUrl, play });
-//                     });
-//                     mediaRecorder.stop();
-//                 });
-//             resolve({ start, stop });
-//     });
-
-//        this.openClose(this.div, this.images)
-//     })
-
-
-// }
-
-// SpeakingDino.prototype.openClose = function(div, images){
-//     if (div.src === "http://localhost:3000/images/dino01.png") {
-//         div.src = images[1]
-//     } else if (div.src === "http://localhost:3000/images/dino02.png"){
-//         div.src =images[0]
-//     }
-// }
-
-SpeakingDino.prototype.populateImages = function(images){
-    images[0] = "/images/dino01.png";
-    images[1] = "/images/dino02.png";
-    images[2] = "/images/dino03.png";
-    images[3] = "/images/dino03.png";
-    images[4] = "/images/dino03.png";
-    images[5] = "/images/dino03.png";
-    images[6] = "/images/dino03.png";
-    images[7] = "/images/dino02.png";
-    images[8] = "/images/dino03.png";
-    images[9] = "/images/dino02.png";
-    images[10] = "/images/dino01.png";
-}
-
-SpeakingDino.prototype.displayNextImage = function(div, images) {
-    const extraImages = images;
-    const extraDiv = div;
-    let x = -1;
-        function displayNextImage1() {
-            if (extraDiv.id == "dinop") {
-                console.log('sheep')
-                x = (x === extraImages.length - 1) ? 0 : x + 1;
-                document.getElementById("dinop").src = extraImages[x];
-            }
-        }
-
-
-    function closeMouth() {
-        const stop = document.getElementById("dinop")
-        stop.id = "dinostop"
-        document.getElementById("dinostop").src = images[0];
-    }
-
-
-    setInterval(displayNextImage1, 100);
-    playAudio()
- }
-
-
-// SpeakingDino.prototype.startTimer =function(div,images) {
-    // setTimeout(this.closeMouth, 4000)
-// }
-
-
 
 module.exports = SpeakingDino;
