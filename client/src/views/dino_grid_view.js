@@ -37,27 +37,29 @@ DinoGrid.prototype.clearList = function () {
 
 DinoGrid.prototype.changeVisiblity = function (onOrOff) {
   if (onOrOff === 'on') {
-    addHiddenClass('main#main')
-    addHiddenClass('div#detail-view')
-    addHiddenClass('div#mapid')
+    this.addHiddenClass('main#main')
+    this.addHiddenClass('div#detail-view')
+    this.addHiddenClass('div#mapid')
 
-    document.querySelector('div#quiz-div').style.display = "block";
+    this.removeHiddenClass('div#quiz-div')
   }
   else {
-    document.querySelector('main#main').style.display = "block";
-    document.querySelector('div#detail-view').style.display = "block";
-    document.querySelector('div#mapid').style.display = "block";
+    this.removeHiddenClass('main#main')
+    this.removeHiddenClass('div#detail-view')
+    this.removeHiddenClass('div#mapid')
 
-    document.querySelector('div#quiz-div').style.display = "none";
+    this.addHiddenClass('div#quiz-div')
   }
 }
 
 DinoGrid.prototype.addHiddenClass = function (element) {
-  document.querySelectior(element).classList.add('hidden');
+  const chosenElement = document.querySelector(element)
+  chosenElement.classList.add('hidden');
 }
 
-DinoGrid.prototype.addHiddenClass = function (element) {
-  document.querySelectior(element).classList.add('hidden');
+DinoGrid.prototype.removeHiddenClass = function (element) {
+  const chosenElement = document.querySelector(element)
+  chosenElement.classList.remove('hidden');
 }
 
 
