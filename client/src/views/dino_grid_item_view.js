@@ -28,10 +28,9 @@ DinoGridItem.prototype.render = function(){
           }
           document.getElementById(dinosaur._id).style.display = "block";
 
-<<<<<<< HEAD
-=======
-          console.log("can you hear me",dinosaur.audio)
->>>>>>> develop
+
+          // console.log("can you hear me", dinosaur.audio)
+
           const roar = new Audio(dinosaur.audio);
           roar.play();
 
