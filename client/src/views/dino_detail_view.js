@@ -7,6 +7,7 @@ const DinoDetailView = function (dinosaurs, detailContainer) {
   this.container = detailContainer
 }
 
+
 DinoDetailView.prototype.render = function(){
     this.container.innerHTML = ""
     for(const dinosaur of this.dinosaurs){
@@ -27,6 +28,9 @@ DinoDetailView.prototype.render = function(){
         const nameMeaning = document.createElement('h3');
         nameMeaning.textContent = `Meaning of Name: "${dinosaur.meaningOfName}"`
         headerDiv.appendChild(nameMeaning)
+        const diet = document.createElement('h3');
+        diet.textContent = dinosaur.diet
+        headerDiv.appendChild(diet)
 
         detailContainer.appendChild(headerDiv);
 
@@ -58,6 +62,13 @@ DinoDetailView.prototype.render = function(){
         const dietParagraph = document.createElement('p')
         dietParagraph.textContent = dinosaur.diet
         info.appendChild(dietParagraph);
+        const nameMeaning = document.createElement('h4')
+        nameMeaning.textContent = "Meaning of Name:"
+        info.appendChild(nameMeaning);
+
+        const nameParagraph = document.createElement('p')
+        nameParagraph.textContent = `"${dinosaur.meaningOfName}"`
+        info.appendChild(nameParagraph);
 
         const continent = document.createElement('h4')
         continent.textContent = "Continent:"
@@ -103,7 +114,15 @@ DinoDetailView.prototype.render = function(){
         infoParagraph.textContent = dinosaur.info
         info.appendChild(infoParagraph);
 
-        contents.appendChild(info);
+        // const showMap = document.createElement('p')
+        // showMap.textContent = 'Where did it live?'
+        // showMap.setAttribute('id', 'openMap')
+        // info.appendChild(showMap)
+        // const getDetails = document.getElementById('openMap')
+        // if(getDetails !== null){
+        // getDetails.addEventListener('click', (evt) => {
+        // console.log('hiiii')
+        // })}
 
         // const showMap = document.createElement('p')
         // showMap.textContent = 'Where did it live?'
@@ -138,6 +157,7 @@ DinoDetailView.prototype.render = function(){
 //   })
 
 // }
+
 
 
 

@@ -5,19 +5,21 @@ const DinoDetailView = require('./dino_detail_view.js')
 const DinoGrid = function(gridContainer, detailContainer){
     this.gridContainer = gridContainer;
     this.detailContainer = detailContainer;
-    
 }
 
 DinoGrid.prototype.bindEvents = function(){
 
-    PubSub.subscribe('Dinosaurs:data-loaded',(event)=>{
-        this.render(event.detail, this.gridContainer, this.detailContainer)
+    PubSub.subscribe('Dinosaurs:data-ready', (event)=>{
+        this.clearList();
+        this.dinosaurs = event.detail;
+        this.render(this.dinosaurs, this.gridContainer, this.detailContainer)
+
     })
 
-    PubSub.subscribe('Dinosaurs:data-ready', (event)=>{
-        this.render(event.detail, this.gridContainer, this.detailContainer)
-       
+    PubSub.subscribe('SortToggle:change', (event)=>{
+      this.changeVisiblity(event.detail);
     })
+
 }
 
 DinoGrid.prototype.render = function(dinosaurs, gridContainer, detailContainer) {
@@ -27,8 +29,27 @@ DinoGrid.prototype.render = function(dinosaurs, gridContainer, detailContainer) 
 
     const dinoDetailView = new DinoDetailView(dinosaurs, detailContainer);
     dinoDetailView.render()
+}
 
+DinoGrid.prototype.clearList = function () {
+  this.gridContainer.innerHTML = '';
+};
 
+DinoGrid.prototype.changeVisiblity = function (onOrOff) {
+  if (onOrOff === 'on') {
+    document.querySelector('main#main').style.display = "none";
+    document.querySelector('div#detail-view').style.display = "none";
+    document.querySelector('div#mapid').style.display = "none";
+
+    document.querySelector('div#quiz-div').style.display = "block";
+  }
+  else {
+    document.querySelector('main#main').style.display = "block";
+    document.querySelector('div#detail-view').style.display = "block";
+    document.querySelector('div#mapid').style.display = "block";
+
+    document.querySelector('div#quiz-div').style.display = "none";  
+  }
 }
 
 

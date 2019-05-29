@@ -1,24 +1,24 @@
 const PubSub = require('../helpers/pub_sub.js')
 const Map = require('./map_view.js')
+const map = new Map()
 
 const DinoGridItem = function (dinosaurs, container) {
     this.dinosaurs = dinosaurs
     this.container = container
-    // console.log(container)
-    
-    
+
 }
+
 
 DinoGridItem.prototype.render = function(){
     this.container.innerHTML = ""
 
     const map = new Map()
     
-    
     for(const dinosaur of this.dinosaurs){
-      
+
         const listContainer = document.createElement('div')
         listContainer.classList.add('dino-box')
+        listContainer.classList.add('grow')
 
         listContainer.onclick = function () {
           var i, x
@@ -28,22 +28,28 @@ DinoGridItem.prototype.render = function(){
           }
           document.getElementById(dinosaur._id).style.display = "block";
 
-          
+
+          console.log("can you hear me",dinosaur.audio)
+          const roar = new Audio(dinosaur.audio);
+          roar.play();
+
+
 
           const mapDiv = document.querySelector('#mapid')
-          
+
           if(mapDiv.classList.contains("off")){
             mapDiv.classList.remove("off")
             map.render()
           }
-          console.log(dinosaur)
+          // console.log(dinosaur)
           let lat = dinosaur.location.latitude
           let long = dinosaur.location.longitude
-          console.log(long,lat);
-          
-        
+          let link = dinosaur.visit
+          let name = dinosaur.name
+          // console.log(long,lat);
           map.setPosition(long,lat)
-          map.addMarker(lat,long)
+
+          map.addMarker(lat,long, link, name)
         }
 
         const name = document.createElement('h3')
@@ -55,8 +61,8 @@ DinoGridItem.prototype.render = function(){
         listContainer.appendChild(name)
     }
 
-  
-    
+
+
 }
 
 DinoGridItem.prototype.openTab = function (tabName) {
