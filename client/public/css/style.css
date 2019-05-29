@@ -136,36 +136,28 @@ h1 {
 .containerTab h2 {
   margin: 0;
   width: 30%;
-  text-transform: uppercase;
   font-size: 35px;
+  text-transform: uppercase;
   color: #18C8FF;
   padding-right: 5px;
 }
 
 .containerTab h3 {
+  text-transform: uppercase;
   font-size: 30px;
-  color: #BF2900;
+  color: rgb(111, 177, 5);
   padding-right: 5px;
-}
-
-.containerTab h3 {
-  color: gray;
-  padding-left: 5px;
-  margin: 0 0 0 10px;
-}
-
-#pronunciation {
-  margin-top: 5px;
-  margin-left: 20px;
-  color: #0085BF;
+  margin: 0;
 }
 
 .headerDiv {
+  padding: 20px 20px 0 5px;
   margin-left: 20px;
   color: #97D800;
-  text-transform: uppercase;
-  padding-left: 5px;
   margin: 0 0 0 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 #pronunciation {
@@ -175,13 +167,6 @@ h1 {
   color: #0085BF;
 }
 
-.headerDiv {
-  margin: 0 20px;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
 
 .contents p {
   margin-top: 10px;
@@ -216,26 +201,6 @@ h1 {
   margin: 20px;
 }
 
-.info-stats {
-  width 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.info-stats img {
-  border-radius: 30px;
-  margin: 20px 0 20px 20px;
-  width: 70%;
-  height: 60%;
-}
-
-#comparison-img {
-  width: 90%;
-  border-radius: 30px;
-  margin: 20px;
-}
-
 .info {
   text-transform: capitalize;
   width: 40%;
@@ -245,7 +210,6 @@ h1 {
 .info-paragraph {
   padding: 20px;
 }
-
 
 
 #grid-view{
