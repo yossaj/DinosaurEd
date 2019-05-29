@@ -204,15 +204,7 @@ h1 {
   overflow-y: hidden;
   border: 0 solid;
   border-radius: 20px;
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 0.4em;
-  color: black */
 }
-
-/* #grid-view img{
-  width: 150px;
-} */
 
 input#quiz {
     margin:4px;
@@ -228,7 +220,6 @@ input#quiz {
 
 #quiz-div {
   padding-left: 20px;
-  /* display: none; */
   border: 10px solid;
   border-color: #97D800;
   border-radius: 20px;

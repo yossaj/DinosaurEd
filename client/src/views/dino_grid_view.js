@@ -40,6 +40,7 @@ DinoGrid.prototype.changeVisiblity = function (onOrOff) {
     this.addHiddenClass('main#main')
     this.addHiddenClass('div#detail-view')
     this.addHiddenClass('div#mapid')
+    this.addHiddenClass('div.dino-record')
 
     this.removeHiddenClass('div#quiz-div')
   }
@@ -47,6 +48,7 @@ DinoGrid.prototype.changeVisiblity = function (onOrOff) {
     this.removeHiddenClass('main#main')
     this.removeHiddenClass('div#detail-view')
     this.removeHiddenClass('div#mapid')
+    this.removeHiddenClass('div.dino-record')
 
     this.addHiddenClass('div#quiz-div')
   }
