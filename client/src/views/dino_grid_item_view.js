@@ -28,11 +28,11 @@ DinoGridItem.prototype.render = function(){
           }
           document.getElementById(dinosaur._id).style.display = "block";
 
-          console.log("can you hear me",dinosaur.audio)
+
+          // console.log("can you hear me", dinosaur.audio)
+
           const roar = new Audio(dinosaur.audio);
           roar.play();
-
-
 
           const mapDiv = document.querySelector('#mapid')
 
@@ -63,15 +63,6 @@ DinoGridItem.prototype.render = function(){
 
 }
 
-DinoGridItem.prototype.openTab = function (tabName) {
-  var i, x;
-  x = document.getElementsByClassName("containerTab");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  document.getElementById(tabName).style.display = "block";
-
-}
 
 
 

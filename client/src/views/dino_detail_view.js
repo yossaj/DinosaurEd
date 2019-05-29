@@ -1,7 +1,6 @@
 const PubSub = require('../helpers/pub_sub.js')
 
 
-
 const DinoDetailView = function (dinosaurs, detailContainer) {
   this.dinosaurs = dinosaurs;
   this.container = detailContainer
@@ -18,23 +17,24 @@ DinoDetailView.prototype.render = function(){
         detailContainer.classList.add('containerTab');
         detailContainer.setAttribute("style", "display: none;");
 
+
+        //headerDiv
         const headerDiv = document.createElement('div');
         headerDiv.classList.add('headerDiv');
 
-        const dinoHeader = document.createElement('h2');
-        dinoHeader.textContent = dinosaur.name
+        const dinoHeader = this.createNewElement('h2', dinosaur.name)
         headerDiv.appendChild(dinoHeader);
 
-        const diet = document.createElement('h3');
-        diet.textContent = dinosaur.diet
+        const diet = this.createNewElement('h3', dinosaur.diet)
         headerDiv.appendChild(diet)
 
         detailContainer.appendChild(headerDiv);
 
-        const pronunciation = document.createElement('h3');
-        pronunciation.textContent = dinosaur.pronunciation
+
+        const pronunciation = this.createNewElement('h3', dinosaur.pronunciation)
         pronunciation.id = 'pronunciation'
         detailContainer.appendChild(pronunciation);
+
 
         const contents = document.createElement('div');
         contents.classList.add('contents');
@@ -48,74 +48,55 @@ DinoDetailView.prototype.render = function(){
         infoStats.appendChild(image);
 
 
+        //info Div
         const info = document.createElement('div');
         info.classList.add('info')
         infoStats.appendChild(info);
 
-        const nameMeaning = document.createElement('h4')
-        nameMeaning.textContent = "Meaning of Name:"
-        info.appendChild(nameMeaning);
+        const nameMeaning = this.createNewElement('h4', "Meaning Of Name:")
+        info.appendChild(nameMeaning)
 
-        const nameParagraph = document.createElement('p')
-        nameParagraph.textContent = `"${dinosaur.meaningOfName}"`
+        const nameParagraph = this.createNewElement('p', `"${dinosaur.meaningOfName}"`)
         info.appendChild(nameParagraph);
 
-        const continent = document.createElement('h4')
-        continent.textContent = "Continent:"
+        const continent = this.createNewElement('h4', "Continent:")
         info.appendChild(continent);
 
-        const continentParagraph = document.createElement('p')
-        continentParagraph.textContent = dinosaur.location.continent
+        const continentParagraph = this.createNewElement('p', dinosaur.location.continent)
         info.appendChild(continentParagraph);
 
-        const period = document.createElement('h4')
-        period.textContent = "Period:"
+        const period = this.createNewElement('h4', "Period:")
         info.appendChild(period);
 
-        const periodParagraph = document.createElement('p')
-        periodParagraph.textContent = dinosaur.period
+        const periodParagraph = this.createNewElement('p', dinosaur.period)
         info.appendChild(periodParagraph);
 
-        const yearsAgo = document.createElement('h4')
-        yearsAgo.textContent = "Years Ago:"
+        const yearsAgo = this.createNewElement('h4', "Years Ago:")
         info.appendChild(yearsAgo);
 
-        const yearsParagraph = document.createElement('p')
-        yearsParagraph.textContent = `${dinosaur.mya} Million`
+        const yearsParagraph = this.createNewElement('p', `${dinosaur.mya} Million`)
         info.appendChild(yearsParagraph);
 
-        const length = document.createElement('h4')
-        length.textContent = "Length:"
+        const length = this.createNewElement('h4', "Length:")
         info.appendChild(length);
 
-        const lengthParagraph = document.createElement('p')
-        lengthParagraph.textContent = dinosaur.length
+        const lengthParagraph = this.createNewElement('p', dinosaur.length)
         info.appendChild(lengthParagraph);
 
+
+        //info-paragraph Div
         const infoParagraphDiv = document.createElement('div');
         infoParagraphDiv.classList.add('info-paragraph');
         contents.appendChild(infoParagraphDiv);
 
-        const infoHeader = document.createElement('h4')
-        infoHeader.textContent = "Info:"
+        const infoHeader = this.createNewElement('h4', "Info:")
         infoParagraphDiv.appendChild(infoHeader);
 
-        const infoParagraph = document.createElement('p')
-        infoParagraph.textContent = dinosaur.info
-        info.appendChild(infoParagraph);
-
-        // const showMap = document.createElement('p')
-        // showMap.textContent = 'Where did it live?'
-        // showMap.setAttribute('id', 'openMap')
-        // info.appendChild(showMap)
-        // const getDetails = document.getElementById('openMap')
-        // if(getDetails !== null){
-        // getDetails.addEventListener('click', (evt) => {
-        // console.log('hiiii')
-        // })}
-
+        const infoParagraph = this.createNewElement('p', dinosaur.info)
         infoParagraphDiv.appendChild(infoParagraph);
 
+
+        //comparison Div
         const comparisonDiv = document.createElement('div');
         comparisonDiv.classList.add('comparison')
 
@@ -124,13 +105,18 @@ DinoDetailView.prototype.render = function(){
         comparisonImg.id = 'comparison-img'
         comparisonDiv.appendChild(comparisonImg);
 
-        contents.appendChild(comparisonDiv);
 
+        contents.appendChild(comparisonDiv);
         detailContainer.appendChild(contents);
         this.container.appendChild(detailContainer);
       }
 }
 
+DinoDetailView.prototype.createNewElement = function(elementType, textContent) {
+  const element = document.createElement(elementType);
+  element.textContent = `${textContent}`;
+  return element;
+}
 
 
 

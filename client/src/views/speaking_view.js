@@ -3,7 +3,7 @@ const SpeakingDino = function(div, recButton){
     this.recButton = recButton
     this.div = div
     this.images = []
-}
+  }
 
 SpeakingDino.prototype.bindEvents = function(){
     this.populateImages(this.images)
@@ -40,12 +40,6 @@ SpeakingDino.prototype.displayNextImage = function (div, images) {
             x = (x === extraImages.length - 1) ? 0 : x + 1;
             document.getElementById("dinop").src = extraImages[x];
         }
-    }
-
-    function closeMouth() {
-        const stop = document.getElementById("dinop")
-        stop.id = "dinostop"
-        document.getElementById("dinostop").src = images[0];
     }
 
     const animate = setInterval(displayNextImage1, 100)
