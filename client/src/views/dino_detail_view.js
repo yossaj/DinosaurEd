@@ -83,7 +83,7 @@ DinoDetailView.prototype.render = function(){
         const lengthParagraph = this.createNewElement('p', dinosaur.length)
         info.appendChild(lengthParagraph);
 
-        
+
         //info-paragraph Div
         const infoParagraphDiv = document.createElement('div');
         infoParagraphDiv.classList.add('info-paragraph');
@@ -92,16 +92,9 @@ DinoDetailView.prototype.render = function(){
         const infoHeader = this.createNewElement('h4', "Info:")
         infoParagraphDiv.appendChild(infoHeader);
 
-<<<<<<< HEAD
-        const infoParagraph = document.createElement('p')
-        infoParagraph.textContent = dinosaur.info
-        info.appendChild(infoParagraph);
-
-=======
         const infoParagraph = this.createNewElement('p', dinosaur.info)
->>>>>>> develop
         infoParagraphDiv.appendChild(infoParagraph);
-    
+
 
         //comparison Div
         const comparisonDiv = document.createElement('div');
@@ -112,7 +105,7 @@ DinoDetailView.prototype.render = function(){
         comparisonImg.id = 'comparison-img'
         comparisonDiv.appendChild(comparisonImg);
 
-        
+
         contents.appendChild(comparisonDiv);
         detailContainer.appendChild(contents);
         this.container.appendChild(detailContainer);

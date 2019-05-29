@@ -101,16 +101,6 @@ const playAudio = () => {
 
 // }
 
-<<<<<<< HEAD
-SpeakingDino.prototype.openClose = function(div, images){
-    if (div.src === "http://localhost:3000/images/dino01.png") {
-        div.src = images[1]
-    } else if (div.src === "http://localhost:3000/images/dino02.png"){
-        div.src =images[0]
-         playAudio()
-    }
-}
-=======
 // SpeakingDino.prototype.openClose = function(div, images){
 //     if (div.src === "http://localhost:3000/images/dino01.png") {
 //         div.src = images[1]
@@ -118,7 +108,6 @@ SpeakingDino.prototype.openClose = function(div, images){
 //         div.src =images[0]
 //     }
 // }
->>>>>>> develop
 
 SpeakingDino.prototype.populateImages = function(images){
     images[0] = "/images/dino01.png";
@@ -145,10 +134,8 @@ SpeakingDino.prototype.displayNextImage = function(div, images) {
                 document.getElementById("dinop").src = extraImages[x];
             }
         }
-<<<<<<< HEAD
-    setInterval(displayNextImage1, 100);
-=======
-        
+
+
     function closeMouth() {
         const stop = document.getElementById("dinop")
         stop.id = "dinostop"
@@ -156,8 +143,7 @@ SpeakingDino.prototype.displayNextImage = function(div, images) {
     }
 
 
-    setInterval(displayNextImage1, 100);  
->>>>>>> develop
+    setInterval(displayNextImage1, 100);
     playAudio()
  }
 
