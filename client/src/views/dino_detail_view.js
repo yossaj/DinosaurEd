@@ -55,9 +55,9 @@ DinoDetailView.prototype.render = function(){
         info.classList.add('info')
         infoStats.appendChild(info);
 
-        const diet = document.createElement('h4')
-        diet.textContent = "Diet:"
-        info.appendChild(diet);
+        const dietprefix = document.createElement('h4')
+        dietprefix.textContent = "Diet:"
+        info.appendChild(dietprefix);
 
         const dietParagraph = document.createElement('p')
         dietParagraph.textContent = dinosaur.diet
