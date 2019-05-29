@@ -71,13 +71,41 @@ const playAudio = () => {
     }
 };
 
+// SpeakingDino.prototype.recordAudio = () =>
+
+//         new Promise(async resolve => {
+//             const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+//             const mediaRecorder = new MediaRecorder(stream);
+//             const audioChunks = [];
+//             mediaRecorder.addEventListener("dataavailable", event => {
+//                 audioChunks.push(event.data);
+//             });
+//             const start = () => mediaRecorder.start();
+//             const stop = () =>
+//                 new Promise(resolve => {
+//                     mediaRecorder.addEventListener("stop", () => {
+//                         const audioBlob = new Blob(audioChunks);
+//                         const audioUrl = URL.createObjectURL(audioBlob);
+//                         const audio = new Audio(audioUrl);
+//                         const play = () => audio.play();
+//                         resolve({ audioBlob, audioUrl, play });
+//                     });
+//                     mediaRecorder.stop();
+//                 });
+//             resolve({ start, stop });
+//     });
+
+//        this.openClose(this.div, this.images)
+//     })
+
+
+// }
 
 // SpeakingDino.prototype.openClose = function(div, images){
 //     if (div.src === "http://localhost:3000/images/dino01.png") {
 //         div.src = images[1]
 //     } else if (div.src === "http://localhost:3000/images/dino02.png"){
 //         div.src =images[0]
-         // playAudio()
 //     }
 // }
 
@@ -110,6 +138,10 @@ SpeakingDino.prototype.displayNextImage = function(div, images) {
     playAudio()
  }
 
+
+// SpeakingDino.prototype.startTimer =function(div,images) {
+    // setTimeout(this.closeMouth, 4000)
+// }
 
 
 

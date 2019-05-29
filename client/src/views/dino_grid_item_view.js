@@ -41,15 +41,19 @@ DinoGridItem.prototype.render = function(){
             mapDiv.classList.remove("off")
             map.render()
           }
-          // console.log(dinosaur)
+          console.log(dinosaur)
           let lat = dinosaur.location.latitude
           let long = dinosaur.location.longitude
-          let link = dinosaur.visit
-          let name = dinosaur.name
-          // console.log(long,lat);
+          console.log(long,lat);
+
+
           map.setPosition(long,lat)
+<<<<<<< HEAD
 
           map.addMarker(lat,long, link, name)
+=======
+          map.addMarker(lat,long)
+>>>>>>> parent of 898bc66... added exhibit links to seed file and pops to the map
         }
 
         const name = document.createElement('h3')
