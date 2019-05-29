@@ -1,4 +1,7 @@
-[
+use dinosaur_hub;
+db.dropDAtabase();
+
+db.dinosaurs.insertMany([
     {
     "_id": "5cee456a98e7f6f0bdba3b78",
     "name": "Allosaurus",
@@ -382,4 +385,6 @@
     },
     "audio": "http://www.amodinosaur.com/Uploads/file/20150914/1442235759158134.wav"
     }
-    ]
+]
+
+)
