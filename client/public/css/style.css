@@ -68,12 +68,27 @@ h1 {
 }
 
 #dino-listen{
-  padding-left: 20px;
+  display: grid;
+  justify-content: center;
+  padding: 20px;
   background-color: rgba(255, 255, 255, 0.75);
   margin: 20px;
   border-radius: 20px;
   color: #0085BF;
 }
+
+#record-stop-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 20px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.6em;
+   border-radius: 32px;
+
+}
+
 
 .dino-box {
   height: 200px;

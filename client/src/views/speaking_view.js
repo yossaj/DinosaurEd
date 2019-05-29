@@ -106,6 +106,14 @@ SpeakingDino.prototype.displayNextImage = function(div, images) {
                 document.getElementById("dinop").src = extraImages[x];
             }
         }
+        
+    function closeMouth() {
+        const stop = document.getElementById("dinop")
+        stop.id = "dinostop"
+        document.getElementById("dinostop").src = images[0];
+    }
+
+
     setInterval(displayNextImage1, 100);  
     playAudio()
  }
