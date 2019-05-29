@@ -25,9 +25,6 @@ DinoDetailView.prototype.render = function(){
         dinoHeader.textContent = dinosaur.name
         headerDiv.appendChild(dinoHeader);
 
-        const nameMeaning = document.createElement('h3');
-        nameMeaning.textContent = `Meaning of Name: "${dinosaur.meaningOfName}"`
-        headerDiv.appendChild(nameMeaning)
         const diet = document.createElement('h3');
         diet.textContent = dinosaur.diet
         headerDiv.appendChild(diet)
@@ -55,13 +52,6 @@ DinoDetailView.prototype.render = function(){
         info.classList.add('info')
         infoStats.appendChild(info);
 
-        const diet = document.createElement('h4')
-        diet.textContent = "Diet:"
-        info.appendChild(diet);
-
-        const dietParagraph = document.createElement('p')
-        dietParagraph.textContent = dinosaur.diet
-        info.appendChild(dietParagraph);
         const nameMeaning = document.createElement('h4')
         nameMeaning.textContent = "Meaning of Name:"
         info.appendChild(nameMeaning);
@@ -124,16 +114,6 @@ DinoDetailView.prototype.render = function(){
         // console.log('hiiii')
         // })}
 
-        // const showMap = document.createElement('p')
-        // showMap.textContent = 'Where did it live?'
-        // showMap.setAttribute('id', 'openMap')
-        // info.appendChild(showMap)
-        // const getDetails = document.getElementById('openMap')
-        // if(getDetails !== null){
-        // getDetails.addEventListener('click', (evt) => {
-        // console.log('hiiii')
-        // })}
-
         infoParagraphDiv.appendChild(infoParagraph);
 
         const comparisonDiv = document.createElement('div');
@@ -150,13 +130,6 @@ DinoDetailView.prototype.render = function(){
         this.container.appendChild(detailContainer);
       }
 }
-
-// DinoDetailView.prototype.getLocation = function(showMap){
-//   shopMap.addEventListener('click', (evt)=>{
-//     console.log('hiiii')
-//   })
-
-// }
 
 
 
