@@ -136,23 +136,25 @@ h1 {
 .containerTab h2 {
   margin: 0;
   width: 30%;
-  text-transform: uppercase;
   font-size: 35px;
+  text-transform: uppercase;
   color: #18C8FF;
   padding-right: 5px;
 }
 
 .containerTab h3 {
+  text-transform: uppercase;
   font-size: 30px;
-  color: #BF2900;
+  color: rgb(111, 177, 5);
   padding-right: 5px;
+  margin: 0;
 }
 
-.containerTab h3 {
+/* .containerTab h3 {
   color: gray;
   padding-left: 5px;
-  margin: 0 0 0 10px;
-}
+
+} */
 
 #pronunciation {
   margin-top: 5px;
@@ -161,11 +163,13 @@ h1 {
 }
 
 .headerDiv {
+  padding: 20px 20px 0 5px;
   margin-left: 20px;
   color: #97D800;
-  text-transform: uppercase;
-  padding-left: 5px;
   margin: 0 0 0 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 #pronunciation {
@@ -175,13 +179,6 @@ h1 {
   color: #0085BF;
 }
 
-.headerDiv {
-  margin: 0 20px;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
 
 .contents p {
   margin-top: 10px;
