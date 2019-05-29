@@ -72,12 +72,27 @@ h1 {
 }
 
 #dino-listen{
-  padding-left: 20px;
+  display: grid;
+  justify-content: center;
+  padding: 20px;
   background-color: rgba(255, 255, 255, 0.75);
   margin: 20px;
   border-radius: 20px;
   color: #0085BF;
 }
+
+#record-stop-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 20px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.6em;
+   border-radius: 32px;
+
+}
+
 
 .dino-box {
   height: 200px;
@@ -129,6 +144,24 @@ h1 {
 
 .containerTab h3 {
   font-size: 30px;
+  color: #BF2900;
+  padding-right: 5px;
+}
+
+.containerTab h3 {
+  color: gray;
+  padding-left: 5px;
+  margin: 0 0 0 10px;
+}
+
+#pronunciation {
+  margin-top: 5px;
+  margin-left: 20px;
+  color: #0085BF;
+}
+
+.headerDiv {
+  margin-left: 20px;
   color: #97D800;
   text-transform: uppercase;
   padding-left: 5px;
@@ -147,7 +180,7 @@ h1 {
   margin-top: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .contents p {
@@ -161,6 +194,26 @@ h1 {
   font-size: 25px;
   margin: 0;
   color: #A2F232;
+}
+
+.info-stats {
+  width 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.info-stats img {
+  border-radius: 30px;
+  margin: 20px 0 20px 20px;
+  width: 70%;
+  height: 60%;
+}
+
+#comparison-img {
+  width: 90%;
+  border-radius: 30px;
+  margin: 20px;
 }
 
 .info-stats {
