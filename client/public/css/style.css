@@ -150,18 +150,6 @@ h1 {
   margin: 0;
 }
 
-/* .containerTab h3 {
-  color: gray;
-  padding-left: 5px;
-
-} */
-
-#pronunciation {
-  margin-top: 5px;
-  margin-left: 20px;
-  color: #0085BF;
-}
-
 .headerDiv {
   padding: 20px 20px 0 5px;
   margin-left: 20px;
@@ -213,26 +201,6 @@ h1 {
   margin: 20px;
 }
 
-.info-stats {
-  width 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.info-stats img {
-  border-radius: 30px;
-  margin: 20px 0 20px 20px;
-  width: 70%;
-  height: 60%;
-}
-
-#comparison-img {
-  width: 90%;
-  border-radius: 30px;
-  margin: 20px;
-}
-
 .info {
   text-transform: capitalize;
   width: 40%;
@@ -242,7 +210,6 @@ h1 {
 .info-paragraph {
   padding: 20px;
 }
-
 
 
 #grid-view{

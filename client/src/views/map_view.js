@@ -33,7 +33,7 @@ Map.prototype.addMarker = function(lat, long, visit, name){
 
         iconSize: [64, 64], // size of the icon
         iconAnchor: [11, 24], // point of the icon which will correspond to marker's location
-        popupAnchor: [-3, -35] // point from which the popup should open relative to the iconAnchor
+        popupAnchor: [5, -26] // point from which the popup should open relative to the iconAnchor
     });
 
     const markerDino = L.marker([lat, long], { icon: dinoIcon }).addTo(this.mymap);
