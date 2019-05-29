@@ -34,13 +34,23 @@ QuizMainView.prototype.fourUniqueDinosaurs = function () {
 
 
 
+
 QuizMainView.prototype.renderQuiz = function () {
+  const formElement = document.createElement('form')
+
   const fourUniqueDinosaurs = this.fourUniqueDinosaurs();
   for (const dinosaur of fourUniqueDinosaurs) {
     const question = new QuizQuestionView(dinosaur, this.quizContainer, this.dietList);
     const questionElement = question.renderQuestion();
-    this.quizContainer.appendChild(questionElement)
+
+    formElement.appendChild(questionElement)
+    this.quizContainer.appendChild(formElement)
   }
+
+  const submitButton = document.createElement('input')
+  submitButton.setAttribute("type", "submit");
+  formElement.appendChild(submitButton)
+
 
 }
 

@@ -12,17 +12,13 @@ QuizQuestionView.prototype.renderQuestion = function() {
   const question = document.createElement('div')
   question.classList.add('question')
 
-  const questionForm = document.createElement('form')
-  questionForm.classList.add('question-form')
-  question.appendChild(questionForm)
-
   const questionStatement = document.createElement('p')
   questionStatement.textContent = `What is the diet of the ${this.uniqueDinosaur.name}?`
-  questionForm.appendChild(questionStatement);
+  question.appendChild(questionStatement);
 
   const radioChoiceDiv = document.createElement('div')
   radioChoiceDiv.classList.add('radio-choice-div')
-  questionForm.appendChild(radioChoiceDiv)
+  question.appendChild(radioChoiceDiv)
 
   for (const dietType of this.dietList) {
 
