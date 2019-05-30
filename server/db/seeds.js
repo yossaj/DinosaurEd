@@ -1,5 +1,5 @@
 use dinosaur_hub;
-db.dropDAtabase();
+db.dropDatabase();
 
 db.dinosaurs.insertMany([
     {
