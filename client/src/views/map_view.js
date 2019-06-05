@@ -1,3 +1,4 @@
+const leaflet = require('leaflet');
 const PubSub = require('../helpers/pub_sub.js')
 
 const Map = function(mymap){
@@ -31,9 +32,9 @@ Map.prototype.addMarker = function(lat, long, visit, name){
     const dinoIcon = L.icon({
         iconUrl: 'https://image.flaticon.com/icons/svg/1674/1674556.svg',
 
-        iconSize: [64, 64], // size of the icon
-        iconAnchor: [11, 24], // point of the icon which will correspond to marker's location
-        popupAnchor: [5, -26] // point from which the popup should open relative to the iconAnchor
+        iconSize: [64, 64], 
+        iconAnchor: [11, 24], 
+        popupAnchor: [5, -26] 
     });
 
     const markerDino = L.marker([lat, long], { icon: dinoIcon }).addTo(this.mymap);

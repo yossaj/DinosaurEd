@@ -3,16 +3,9 @@ body {
   color: aliceblue;
   background-image: linear-gradient(to right, #00B2FF, #42EDDC);
   margin-bottom: 50px;
-
   grid-template-columns: 1fr;
-
   grid-gap: 0.5em;
   font-family: Proxima Soft, sans-serif;
-  /* font-size: 30px;
-  font-weight: bold;
-  color: #FF9605;
-  -webkit-text-stroke-width: 2px;
-   -webkit-text-stroke-color: white; */
   padding: 0rem 3rem;
 }
 
@@ -55,8 +48,6 @@ h1 {
 .dino-record{
  display: grid;
   grid-template-columns: 3fr 1fr;
-  /* align-content: center; */
-
   background-image: url("../images/junglebg.jpeg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -307,8 +298,31 @@ input#quiz {
 
 @media only screen and (max-width: 411px){
   #grid-view{
-    grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
+    
+    }
+
+    .dino-record{
+      margin: 0px;
+    }
+
+    .dino-record img{
+        width: 315px;
+    }
+
+    h1 {
+        margin: 10px;
+        padding: 10px;
+        font-size: 50px;
   }
+
+  .dino-record{
+ display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+
 }
 
 .select-css {

@@ -40,7 +40,7 @@ SpeakingDino.prototype.displayNextImage = function (div, images) {
             document.getElementById("dinop").src = extraImages[x];
         }
     }
-    const animate = setInterval(displayNextImage1, 100)
+    const animate = setInterval(displayNextImage1, 140)
     setTimeout(() => { clearInterval(animate);}, 3000);
 }
 
