@@ -1,3 +1,5 @@
+<img align ="right" width="300" src="https://i.imgur.com/DrotQhN.png">
+
 <h1 align = "center"> Dinosaur Hub </h1>
 <hr>
 <h2 align="center">A JavaScript Group Project</h2>
