@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const speakingDino = new SpeakingDino(speaking_img, record_butt)
     speakingDino.bindEvents()
 
-    const url = 'http://localhost:3000/api/dinosaurs'
+    const url = 'https://agile-falls-62677.herokuapp.com/api/dinosaurs'
     const dinosaur = new Dinosaurs(url);
     dinosaur.getData();
     dinosaur.bindEvents();

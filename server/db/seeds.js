@@ -1,4 +1,4 @@
-use dinosaur_hub;
+use heroku_c7m26j3v;
 db.dropDatabase();
 
 db.dinosaurs.insertMany([
