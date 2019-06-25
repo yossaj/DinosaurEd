@@ -19,6 +19,8 @@ MongoClient.connect('mongodb://localhost:27017')
     console.error(err);
   });
 
-app.listen(3000, function() {
+const port = process.env.PORT || 3000;
+
+app.listen(port, function() {
   console.log(`Dinosaur server running on port ${this.address().port}`);
 });
